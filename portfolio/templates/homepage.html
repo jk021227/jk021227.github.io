@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="../css/homepage.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+
+img {
+    display: block;
+    margin-left: 80px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 25px;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+
+.col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 40px; 
+}
+
+.container {
+    text-align: center;
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0fbff
+}
+
+#jumbop {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.btn-secondary {
+    background-color: #0cb2ff;
+    border-color: #0cb2ff; /* Button border color */
+    color: white; /* Text color */
+    margin-right: 3px;
+}
+
+.btn-secondary:last-child {
+    margin-right: 0;
+}
+
+.btn-secondary:hover {
+    background-color:#0087c6; /* Slightly darker color for hover effect */
+    border-color: #0cb2ff;/* Button border color */
+}
+
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #cbefff !important; /* Light pink background */
+}
+
+img {
+    display: block;
+    margin-left: 80px;
+    margin-right: 20px;
+    max-width: 100%; /* Ensure image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.heart {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.heart:hover {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Starting and ending position */
+    }
+    50% {
+        transform: translateY(-15px); /* Upward jump */
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-light">
+        <div class="container-fluid d-flex justify-content-between">
+            <div>
+                <h1 class="navbar-brand mb-0 h1">
+                    <a href="#" style="text-decoration: none; color: inherit;">
+                        🩵 Jhon's Sky Studio 🩵
+                    </a>
+                </h1>                  
+                <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+            </div>
+            <div>
+                <!-- <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button> -->
+                <button onclick="location.href = '/projects';" type="button" class="btn btn-secondary">Projects</button>
+                <button onclick="location.href = '/work';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+                <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron" style="background-color:  #cbefff; margin:0 0 0 30px;" >
+                    <h2 style="font-size: 40px; padding-left:10px;">
+                        <span class="heart">Hello 🦋</span>
+                    </h2>
+                    <p style="font-size: 25px; padding-left:10px;">
+                        My name is Jhon Kim, a software engineer & product manager that loves to craft 'n get creative :) 
+                    </p>
+                    <p style="font-size:18px; padding-left:10px;"> 
+                        <strong>Major:</strong> Computer Science <br>
+                        <strong>Minor:</strong> Interactive Media & Legal Studies </p>
+                    </p>
+                    <p style="padding-left:10px;">
+                        <button onclick="location.href = 'https://www.linkedin.com/in/youngducando';" class="btn btn-secondary">LinkedIn</button>
+                        <button onclick="location.href = 'https://github.com/jk021227';" class="btn btn-secondary">Github</button>
+                        <button onclick="location.href = 'mailto:ykim021227@gmail.com';" class="btn btn-secondary">Email</button>
+                    </p>                    
+                </div>
+            </div>
+            <img src="{{ url_for('static', filename='images/me.jpeg') }}" style="width: 380px; height: 430px; margin-top: 50px;">
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function homepage() {
+        window.location.href = 'homepage.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+</script>

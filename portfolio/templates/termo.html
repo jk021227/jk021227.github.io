@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experiences</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="./css/work.css"/>
+    
+       
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h2{
+            font-size: 25px;
+        }
+        
+        h3{
+            font-size: 20px;
+        }
+
+        h4{
+            font-size: 18px;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+    
+        .container {
+            margin: 100px 100px 40px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-secondary {
+            /* background-color:  #0000ff;  */
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+    
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+    
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light blue background */
+        }
+    
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+
+        code{
+            color: #0087c6;
+        }
+
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="/homepage" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
+            <button onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button id="workButton" onclick="location.href = '#';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <h1>Termolatío - The Termolator for Spanish</h1>
+    <p><strong>Contributors:</strong> <code>Pauline Wee</code>, <code>Jhon Kim</code>, and <code>Levith Andrade Cuellar</code></p>
+
+    <h3>Description</h3>
+    <p>The <a href="https://github.com/AdamMeyers/The_Termolator">Termolator</a> is an open-source terminology extraction system that identifies the most characteristic terms of a specialized set of documents when compared to a related but more general set of literature. This project seeks to address a significant gap in the Termolator’s coverage by adapting it to work for Spanish. The system so far works for English, Chinese, and French. As a final project for our Natural Language Processing class, we developed this adaptation of The Termolator and wrote an <a href="/academic-paper.pdf">academic paper</a> about it.</p>
+    <h3>How It Works</h3>
+    <p>First, Termolatío scrapes background and foreground corpora from Spanish Wikipedia using Beautiful Soup. 
+        Then, it processes the articles through part of speech (POS) tagging, noun chunking, and distributional ranking with an adapted system from previous versions of the Termolator. 
+        When this process is complete, Termolatío outputs a ranked term list of the most characteristic terminology of the foreground when compared to the background.</p>
+    <h3>Performance</h3>
+    <p>When evaluated by a Spanish speaker for precision, Termolatío resulted in 67% precision for terms more related to the foreground than the background. However, further tests using a larger number of annotators and a wider test set need to be conducted in order to better benchmark Termolatío’s performance compared to other automatic terminology extraction (ATE) systems.</p>
+    <h3>How To Use It</h3>
+    <p>Termolatío can be used to identify the most characteristic terminology of a foreground set of documents when compared to a background, more general, set of documents. To use the system:</p>
+    <ol>
+        <li>Download or clone the repository onto your machine.</li>
+        <li>Download the spacy Python module and other dependencies, as alerted, that your machine may not already have.</li>
+        <li>Use the <a href="termolatío/run_cli.sh">run_cli.sh</a> bash file to run the system. When asked for input, click "ENTER" for all prompts to run the demo.</li>
+    </ol>
+    <p>The command line interface is still under development to allow for seamless use. For the time being, please modify the codebase on your machine if necessary.</p>
+    <h3>Preview</h3>
+    <p style="margin-bottom:10px;">Here are some screenshots of the command line interface (CLI) that exemplify how Termolatío works.<br>
+    <strong>Input:</strong> Termolatío's friendly robot mascot greets you and asks for your input files.</p>
+    <img src="{{ url_for('static', filename='images/term1.png') }}" style="border-radius:10px;" alt="input" width="50%"/>
+    <br>
+    <p style="margin-bottom:10px;"><strong>Output:</strong> Termolatío is "done cooking" and tells you what your result files have been named.</p>
+    <img src="{{ url_for('static', filename='images/term2.png') }}" style="border-radius:15px;" alt="output" width="50%"/>
+    <br>
+    <p>Termolatío does all of the hard work by leveraging a variety of Python files in the background which it runs via the <a href="/termolatío/run_termolator_spanish.sh">run_termolator_spanish.sh</a> bash file.</p>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function homepage() {
+        window.location.href = 'homepage.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+</script>
+</body>
+
+</html>
+
+

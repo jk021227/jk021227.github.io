@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponyo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="./css/work.css"/>
+    
+       
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h2{
+            font-size: 25px;
+        }
+        
+        h3{
+            font-size: 20px;
+        }
+
+        h4{
+            font-size: 18px;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+    
+        .container {
+            margin: 100px 100px 40px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-secondary {
+            /* background-color:  #0000ff;  */
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+    
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+    
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light blue background */
+        }
+    
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+
+        code{
+            color: #0087c6;
+        }
+
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="/homepage" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
+            <button onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button id="workButton" onclick="location.href = '#';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <h1>🌱 Ponyo Plant — Plant Health WebApp 🌱</h1>
+    <p><strong>Team Members:</strong> <code>Alex Hmitti</code>, <code>Jhon Kim</code>, <code>Aaron Stein</code>, and <code>Rafael Nadal-Scala</code></p> 
+    <p>
+        <a href="https://github.com/software-students-fall2023/5-final-project-ponyo/actions/workflows/cd-ci.yml">
+            <img src="https://github.com/software-students-fall2023/5-final-project-ponyo/actions/workflows/cd-ci.yml/badge.svg" alt="CI/CD Badge">
+        </a>
+    </p>
+    <h3>📖 Description</h3>
+    <p>
+        Ponyo Plants is a plant health app that identifies and analyzes a photo of your choice of plant through a machine learning model.
+        Using <a href="https://web.plant.id/plant-health-assessment/">Plant.id's plant analysis model</a>, the app will first identify 
+        with a certain probability the plant you have uploaded, alongside displaying its health percentage. If you upload something that is 
+        NOT a plant (is_plant &lt; 0.5), it will flash a warning asking you to upload a photo of a valid plant.
+    </p>
+
+    <h3>🔗 Links</h3>
+    <ul>
+        <li><a href="https://hub.docker.com/r/rafinator123/ponyo-plants">Docker Hub Repository</a></li>
+    </ul>
+
+    <h3>📦 Dependencies</h3>
+    <p>
+        Ponyo Plants uses Plant.id's API, which requires unique keys for access. If you do not have a personal Plant.id API key, 
+        create an account via <a href="https://admin.kindwise.com/signup?_gl=1*15v4app*_ga*MTgwNDcyMzMyOS4xNzAyNzY2MDkz*_ga_WG5G72QXPW*MTcwMjk0NTQ5OC4yLjEuMTcwMjk0NTU3OC4wLjAuMA..*_ga_YF3JF8EDWW*MTcwMjk0NTQ5OC4yLjEuMTcwMjk0NTU3OC40Ni4wLjA.">this link</a>.
+    <br>
+        Once registered, click on 'Create new API key'. A pop-up window will ask for the specifications of creating the API key; make sure to select 'Plant.id', 
+        name the API key, and assign the max number of credits (100). Copy that API key and place it inside your .env file as <code>API_KEY=(your API key)</code>.
+    <br>Ponyo Plants relies on Docker for containerization. If Docker isn't installed, download and install it from <a href="https://www.docker.com/products/docker-desktop/">here</a>.</p>
+
+    <h2>⚙️ Installation</h2>
+    <p>To get started, clone the repository to your local machine and navigate to the project's directory. <br>
+        Inside the <code>Ponyo Plants - ML Droplet/</code> directory, create a <code>.env</code> file with the following contents:</p>
+
+    <pre>
+    {
+        DATABASE_CONNECTION_STRING=mongodb+srv://ykim021227:gKP6MGYC0lAI96bb@plant.zm0eyo8.mongodb.net/?retryWrites=true&w=majority
+        DATABASE_NAME=ponyo_plant
+        COLLECTION_NAME=users
+        FLASK_SECRET_KEY=ponyoisthestrongestcharacterintheworldandifudisagreeurincorrect1227
+        API_KEY=YOUR_API_TOKEN_HERE
+    }
+    </pre>
+
+    <p>Replace the text <code>YOUR_API_TOKEN_HERE</code> with your Plant.id API Key, and save.</p>
+
+    <h3>🚀 Usage</h3>
+    <p>To start the application, run the following command: <code>docker-compose up --build</code>
+        <br> You'll see a series of messages indicating the build progress.</p>
+
+    <pre>
+        ponyo-plants  |  * Serving Flask app 'web_app'
+        ponyo-plants  |  * Debug mode: off
+        ponyo-plants  | WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+        ponyo-plants  |  * Running on all addresses (0.0.0.0)
+        ponyo-plants  |  * Running on http://127.0.0.1:5001
+        ponyo-plants  |  * Running on http://172.19.0.3:5001
+        ponyo-plants  | Press CTRL+C to quit
+    </pre>
+
+    <p>Open <a href="http://127.0.0.1:5001">http://127.0.0.1:5001</a> in your browser and create an account to get started.</p>
+    <p>You won't be able to access the 'Upload plant' page until you are logged in. After logging in, click on the 'Upload plant' tab to upload a photo of a plant for species and health percentage analysis.</p>
+
+    <br>
+    <button onclick="openponyoplant()" type="button" class="btn btn-secondary">Link to project&nbsp;↗️</button>
+
+</div>
+
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function homepage() {
+        window.location.href = 'homepage.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+
+    function openponyoplant() {
+        window.open('https://github.com/jk021227/workportfolio/tree/main/Ponyo%20Plants%20-%20ML%20Droplet', '_blank');
+    }
+</script>
+</body>
+
+</html>
+
+

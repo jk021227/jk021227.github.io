@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+        }
+
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+
+        .container {
+            margin: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-secondary {
+            /* background-color:  #0000ff;  */
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light pink background */
+        }
+
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="/homepage" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <!-- <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button> -->
+            <button onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button onclick="location.href = '/work';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button id="aboutButton" onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container"> <!-- Adjust padding-top based on the height of your navbar -->
+
+    <h2>Who am I ? 👩🏻‍💻</h2>
+    <p>
+        As a software engineer with a strong background in law and UX design, I am passionate about creating solutions that help uplift underrepresented communities. 
+        My biggest academic and professional strengths are a determined work ethic, being a flexible team player, and being an clear communicator. 
+        Having worked in various settings and positions, in and outside of school, I have developed rapid critical thinking, especially when working under pressure.
+        I can operate as both a cooperative teammate and an efficient leader given what the circumstances demand.
+    </p>
+
+    <br>
+    <h2>Specialty & Interests 🎽</h2>
+        <ul>
+            <li>Fullstack Development</li>
+            <li>UX Design</li>
+            <li>Edu-Tech</li>
+            <li>Legal-Tech</li>
+            <li>Community Outreach</li>
+        </ul>
+    
+    <br>
+    <h2>Hackathons & Competitions 🏆</h2>
+    <ul>
+        <li>1st place, Global Case Challenge at Visa | August 2024 | 1750 USD cash prize
+        <ul>
+            <li>Competed among 172 interns, 27 teams in NA, LAC, CEMEA, and AP regions to develop a product that would expand financial inclusion at Visa with AI</li>
+        </ul>
+        </li>
+        <li>1st place, Whiteshield Case Competition | April 2024 | 500 USD cash prize
+        <ul>
+            <li>Presented a policy strategy grounded in harnessing the local strengths of the UAE in relation to technological advancements in AI, the digital economy, and remote work</li>
+            <li>Specifically took charge of researching blockchain technology and analyzing its market potential</li>
+            <li><a href="https://docs.google.com/presentation/d/1LRlI22_kVX4vZLSB8_KDPnuYyC0m0z68ndGtAFkRHY8/edit?usp=sharing">Pitch Deck</a></li>
+        </ul>
+        </li>
+        <li>1st place, The Graces Ideathon | February 2024 | 1300 USD cash prize
+        <ul>
+            <li>Pitched a tech-driven solution with computer vision and AR/VR/AI to solve the food waste produced in the UAE, specifically during Ramadan</li>
+            <li><a href="https://docs.google.com/presentation/d/1ZfTexEnj61XBPL9MDHbBtolPAZrufenuQWh3E7vuFMs/edit?usp=sharing">Pitch Deck</a></li>
+        </ul>
+        </li>
+        <li>Designpreneurs hackathon, NYU | November 2023
+        <ul>
+            <li><a href="https://www.figma.com/proto/qkICTwOEjRpVjolrwIsEjy/Habi?node-id=20-11038&starting-point-node-id=20%3A11038&mode=design&t=xDMb8SHmQJBjyzfm-1">Product Prototype</a></li>
+        </ul>
+        </li>
+        <li>Finalist, L’Oréal Brandstorm Middle East 2023 | April 2023
+        <ul>
+            <li>Ranked in the top 4 out of over 150 teams in the GCC region & presented twice to executives from L'Oreal and Meta</li>
+            <li><a href="https://www.figma.com/proto/yDdkaIrbXjzZprXZil3sYa/Loreal?type=design&node-id=223-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=223%3A2&show-proto-sidebar=1">Product Prototype</a></li>
+        </ul>
+        </li>
+        <li>3rd place, IMA Student Case Competition Middle East | May 2022 | 500 USD cash prize
+        <ul>
+            <li>Presented a case advising a local Singaporean business in areas of economic growth and user retention</li>
+            <li><a href="https://docs.google.com/presentation/d/1LUkWI9RbDt2csNOSsCo-aPYvB_qGfqwrYS0xgfFaKzE/edit?usp=sharing">Pitch Deck</a></li>
+        </ul>
+        </li>
+    </ul>
+    <br>
+    <!-- button with link to my CV hosted on goolge drive -->
+    <button onclick="openCV()" type="button" class="btn btn-secondary">View my CV</button>
+    
+</div>
+
+<script>
+    // Get the current page URL
+    if (window.location.pathname === '/about') {
+        // If the current page is '/about', apply custom background color
+        document.getElementById('aboutButton').classList.add('active-page');
+    }
+
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function homepage() {
+        window.location.href = 'homepage.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+
+    // Function to open the CV in a new tab
+    function openCV() {
+        window.open('https://drive.google.com/file/d/1nJf2uEdDrOn1_LAbBi8_UseAtAPKo9zY/view?usp=sharing', '_blank');
+    }
+
+</script>
+</body>
+
+</html>
+
+

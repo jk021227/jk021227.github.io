@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponyo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="./css/work.css"/>
+    
+       
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h2{
+            font-size: 25px;
+        }
+        
+        h3{
+            font-size: 20px;
+        }
+
+        h4{
+            font-size: 18px;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+    
+        .container {
+            margin: 100px 100px 40px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-secondary {
+            /* background-color:  #0000ff;  */
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+    
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+    
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light blue background */
+        }
+    
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+
+        code{
+            color: #0087c6;
+        }
+
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="/homepage" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
+            <button onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button id="workButton" onclick="location.href = '#';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <h1>🗣️ Ponyo — Neurodivergence Aid 🗣️</h1>
+    <p><strong>Team Members:</strong> <code>Alex Hmitti</code>, <code>Jhon Kim</code>, <code>Aaron Stein</code>, and <code>Rafael Nadal-Scala</code></p> 
+    <h3>👥 Stakeholders</h3>
+    <h4>Stakeholder A: (Neurodivergent individual with ADD)</h4>
+    <ul>
+        <li>The Emergency contact feature is essential and should be easily accessible.</li>
+        <li>The stimulus overload feature might be less useful since many forget to use it in real-time. Consider using pre-planned alarms for crowded spaces.</li>
+        <li>Notifications should be attention-grabbing to avoid being ignored.</li>
+        <li>The in-game pet is a nice idea, especially if it gives reminders.</li>
+        <li>Avoid asking too many questions when setting up the app to prevent barriers to use.</li>
+        <li>Include features to keep users' hands busy and offer standardized reminders for daily tasks like eating and showering.</li>
+        <li>Avoid language that infantilizes users.</li>
+    </ul>
+
+    <h3>Stakeholder B: (Psychology student with experience working with neurodivergent children)</h3>
+    <ul>
+        <li>Focus timers and visual reminders are useful but should be optional.</li>
+        <li>The emergency alert feature is crucial, especially for children.</li>
+        <li>The UI should avoid overwhelming users.</li>
+        <li>Offer checkboxes or presets to help users identify specific challenges and customize the app accordingly.</li>
+        <li>Believes the app will positively impact neurodivergent users, aiding social interactions and handling sensory overload.</li>
+    </ul>
+
+    <h3>📜 Product Vision Statement</h3>
+    <p><strong>Ponyo</strong> is a mobile application that aims to facilitate communication, centralize wellness/mental health tools, and provide safety measures.</p>
+
+    <h3>✅ User Requirements</h3>
+    <ul>
+        <li>As a neurodivergent individual, I want tools to help me communicate so my accessibility needs are met.</li>
+        <li>As a caregiver, I want tools tailored to the unique requirements of those I support.</li>
+        <li>As a neurodivergent individual, I want to track my emotions so my caregiver can identify patterns in my mental health.</li>
+        <li>As a first responder, I want quick access to medical IDs to provide appropriate care.</li>
+        <li>As a neurodivergent individual, I want an interactive pet to alleviate distress and anxiety.</li>
+        <li>As a neurodivergent individual, I want to quickly share my location with my caregiver during an emergency.</li>
+        <li>As a neurodivergent individual, I want a timer that helps me work in short bursts for better focus.</li>
+        <li>As a neurodivergent individual, I want customizable options for Pomodoro timers and emotion boards.</li>
+        <li>As a neurodivergent individual, I want quick access to wellness resources in case of an emergency.</li>
+        <li>As a caregiver, I want to better understand and communicate with neurodivergent individuals in real-time.</li>
+    </ul>
+
+    <h3>📊 Activity Diagrams</h3>
+    <ul>
+        <li><a href="https://github.com/software-students-fall2023/1-specification-exercise-teamteam/files/12778271/Activity_diagram.pdf" target="_blank">General Activity Diagram</a></li>
+        <li><a href="https://github.com/software-students-fall2023/1-specification-exercise-teamteam/files/12778272/ShareLocationFunctionalityUMLDiagram.drawio.pdf" target="_blank">Two Story Activity Diagram</a></li>
+    </ul>
+
+    <h3>💻 Development</h3>
+    <ul>
+        <li><a href="https://www.figma.com/file/8wzNaISZX5JM3BdLh4Ejaz/Wireframe?type=design&node-id=0%3A1&mode=design&t=2OaGZ9HABv6Sc6Bx-1" target="_blank">Wireframe</a></li>
+        <li><a href="https://www.figma.com/proto/fY0VjtclJv9SxHZEqeRVrz/Ponyo-Clickable-Prototype?page-id=0%3A1&type=design&node-id=37-275&viewport=-4150%2C2699%2C0.49&t=93k0r9yA1sugBO5o-1&scaling=scale-down&starting-point-node-id=37%3A275&show-proto-sidebar=1&mode=design" target="_blank">Prototype</a></li>
+    </ul>
+
+    <h3>👩‍🏫 Stakeholder Demo</h3>
+    <p><a href="https://docs.google.com/presentation/d/14Se8L7rP8Ieec9GXpGOdXtpmMrlSaLdiW4rpgqbJ7pI/edit#slide=id.p1" target="_blank">Presentation</a></p>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function homepage() {
+        window.location.href = 'homepage.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+</script>
+</body>
+
+</html>
+
+

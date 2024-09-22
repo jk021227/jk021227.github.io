@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponyo Feels</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="./css/work.css"/>
+    
+       
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h2{
+            font-size: 25px;
+        }
+        
+        h3{
+            font-size: 20px;
+        }
+
+        h4{
+            font-size: 16px;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+    
+        .container {
+            margin: 100px 100px 55px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-secondary {
+            /* background-color:  #0000ff;  */
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+    
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+    
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light blue background */
+        }
+    
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+
+        code{
+            color: #0087c6;
+        }
+
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="/homepage" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
+            <button onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button id="workButton" onclick="location.href = '#';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <h1>😊 Ponyo Feels — Emotion Recognition WebApp 😊</h1>
+    <p><strong>Team Members:</strong> <code>Alex Hmitti</code>, <code>Jhon Kim</code>, <code>Aaron Stein</code>, and <code>Rafael Nadal-Scala</code></p> 
+    <p>
+        <a href="https://github.com/software-students-fall2023/4-containerized-app-exercise-team-team-team-team-team-team/actions/workflows/lint.yml">
+            <img src="https://github.com/software-students-fall2023/4-containerized-app-exercise-team-team-team-team-team-team/actions/workflows/lint.yml/badge.svg" alt="Check lint and format">
+        </a>
+        <a href="https://github.com/software-students-fall2023/4-containerized-app-exercise-team-team-team-team-team-team/actions/workflows/python-app.yml">
+            <img src="https://github.com/software-students-fall2023/4-containerized-app-exercise-team-team-team-team-team-team/actions/workflows/python-app.yml/badge.svg?branch=main" alt="CI/CD">
+        </a>
+    </p>
+
+    <h3>💡 Concept</h3>
+    <p>
+        Ponyo Feels is an emotion recognition app that allows users to take a selfie and quickly have their facial expressions analyzed by a machine learning model.
+    <br>
+        Using <a href="https://hume.ai/products/facial-expression-model/">Hume AI's facial expression model</a>, this analysis identifies and reports the most prominent emotions displayed in a selfie.
+    <br>
+        In addition to recognizing emotions, Ponyo Feels suggests Spotify songs that match the identified emotion and can expand to include other media recommendations based on the user's emotions.
+        These emotions are then stored in a database, allowing the app to provide insights into the most common emotions experienced by all its users.
+    </p>
+
+    <h3>📦 Dependencies</h3>
+    <p>
+        Ponyo Feels uses Hume APIs that require unique keys for access. If you do not have a personal Hume API key, create an account with <a href="https://www.hume.ai">Hume.AI</a>.
+    <br>
+        Then, open the 'API Keys' page from the vertical navigation bar on the left-hand side of the main page. Once directed to the 'API Keys' page, you will be able to reveal and copy your personal API Key.
+        Ponyo Feels relies on Docker for containerization. Ensure Docker is installed on your machine. If not, download and install it <a href="https://www.docker.com/products/docker-desktop">here</a>.
+    </p>
+
+    <h2>⚙️ Installation</h2>
+    <p>
+        To get started, clone the repository to your local machine and navigate to the project's directory.
+    <br>
+        Inside the <code>Ponyo Feels - Containerized App w: Machine Learning Client/src/</code> directory, create a <code>config.json</code> file with the following contents:
+    </p>
+    <pre>
+        {
+            "api_token": "YOUR_API_TOKEN_HERE"
+        }
+    </pre>
+    <p>
+        Replace <code>YOUR_API_TOKEN_HERE</code> with your Hume API Key and save.
+    <br>
+        Next, navigate to the root directory `4-containerized-app-exercise-team-team-team-team-team-team/` and create a `.env` file with the following contents:
+    </p>
+    <pre>
+        DATABASE_CONNECTION_STRING = "mongodb+srv://jaar2023:me8rd2iS73YJLTfW@recipes01.ajqwb7q.mongodb.net/"
+    </pre>
+
+    <h3>🚀 Usage</h3>
+    <p>Begin the application by running the following command: <code>docker-compose up --build</code>. <br>You'll see a series of messages indicating the progress of the build process.
+    </p>
+    <p>Once the build process is complete, you should see the following lines, indicating that the application is up and running:</p>
+    <pre>
+        ponyo-feels  |  * Serving Flask app 'web_app'
+        ponyo-feels  |  * Debug mode: off
+        ponyo-feels  | INFO:werkzeug:WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+        ponyo-feels  |  * Running on all addresses (0.0.0.0)
+        ponyo-feels  |  * Running on http://127.0.0.1:5001
+        ponyo-feels  |  * Running on http://172.18.0.3:5001
+        ponyo-feels  | INFO:werkzeug:Press CTRL+C to quit
+    </pre>
+
+    <p>
+        Open <a href="http://127.0.0.1:5001">http://127.0.0.1:5001</a> in your browser and click the button on the main page to reach the webcam interface. Make sure to grant camera access to the website and then click the button to have your selfie analyzed.
+    </p>
+    
+    <h3>🚶‍♀️ Walkthrough </h3>
+    <h4>Step 1: Click on the <code>Read my facial expression</code> button</h4>
+    <img src="{{ url_for('static', filename='images/feels1-1.png') }}" style="width:60%">
+    <br>
+    <h4>Step 2: Click <code>Capture</code> to snap your selfie!</h4>
+    <img src="{{ url_for('static', filename='images/feels1-2.png') }}" style="width:60%">
+    <br>
+    <h4>Results: </h4>
+    <img src="{{ url_for('static', filename='images/feels1-3.png') }}" style="width:60%">
+    <br>
+    <button onclick="openponyofeels()" type="button" class="btn btn-secondary">Link to project&nbsp;↗️</button>
+
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function homepage() {
+        window.location.href = 'homepage.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+
+    function openponyofeels() {
+        window.open('https://github.com/jk021227/workportfolio/tree/main/Ponyo%20Feels%20-%20Containerized%20App%20w%3A%20Machine%20Learning%20Client', '_blank');
+    }
+</script>
+</body>
+
+</html>

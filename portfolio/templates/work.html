@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experiences</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="./css/work.css"/>
+    
+       
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+        }
+    
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+    
+        .container {
+            margin: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-secondary {
+            /* background-color:  #0000ff;  */
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+    
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+    
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light blue background */
+        }
+    
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+    
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="/homepage" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <!-- <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button> -->
+            <button onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button id="workButton" onclick="location.href = '#';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container"> <!-- Adjust padding-top based on the height of your navbar -->
+
+    <h2>🐳 &nbsp;Main Work Experiences &nbsp;🐳</h2>
+    <br>
+        <h5>Product Management Intern, <a href="https://ae.visamiddleeast.com/en_AE">Visa</a></h5>
+        <ul>
+            <li><strong>Duration:</strong> June 2024 - present | Full-time</li>
+            <li><strong>Department:</strong> Product</li>
+            <li><strong>Accomplished:</strong>
+            <ul>
+                <li>Developing business use cases and technical product documents of Generative AI and ML-powered products</li>
+                <li>Placed 1st in the Global Intern Case Challenge, pitching to the CEO of Visa — first ever product to be put into development pipeline in competition history</li>
+            </ul>
+            </li>
+            <li><strong>Skills Deployed:</strong> Python, Product/Project Management, Pandas, Solution Architecture, Customer Roadmap Formulation, Figma</li>
+        </ul>
+        <br>
+        <h5>Software Engineer, <a href="https://www.linkedin.com/company/dato-pr/">dato.</a></h5>
+        <ul>
+            <li><strong>Duration:</strong> December 2023 - present | Part-time</li>
+            <li><strong>Department:</strong> Engineering</li>
+            <li><strong>Accomplished:</strong>
+            <ul>
+                <li>Created wireframe and design document</li>
+                <li>Web and app in-development</li>
+            </ul>
+            </li>
+            <li><strong>Skills Deployed:</strong> Python, Django, MongoDB, React, React Native, Project Management, Design Architecture</li>
+        </ul>
+        <br>
+        <h5>Data Science Intern, <a href="https://www.swftbox.com/">swftbox</a></h5>
+        <ul>
+            <li><strong>Duration:</strong> June 4 - August 15, 2023 | Full-time</li>
+            <li><strong>Department:</strong> AI</li>
+            <li><strong>Accomplished:</strong>
+            <ul>
+                <li>Cleaned up 10+ datasets and drafted a guide document for filing a provisional and non-provisional algorithm patent in the US</li>
+                <li>Collected data & trained ML model to enhance dynamic responsiveness of Customer Service Chatbot by 20%</li>
+            </ul>
+            </li>
+            <li><strong>Skills Deployed:</strong> Python, PostgreSQL, MySQL, Data Collection & Cleaning, NLP, Model Training & Tuning</li>
+        </ul>
+  
+</div>
+
+<script>
+    // Get the current page URL
+    if (window.location.pathname === '/work') {
+        // If the current page is '/about', apply custom background color
+        document.getElementById('workButton').classList.add('active-page');
+    }
+
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function homepage() {
+        window.location.href = 'homepage.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+</script>
+</body>
+
+</html>
+
+
