@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Oréal</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3{
+            text-align: center;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+
+        .container {
+            margin: 110px 100px 70px 100px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+        }
+        .btn-secondary {
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light pink background */
+        }
+
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+
+        img {
+            width: 80%;
+            height: auto;
+        }
+
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        .jumbotron {
+            margin-top: 8px;
+            background-color: #cbefff;
+            padding: 20px 20px 15px 25px;
+            border-radius: 10px; /* Optional: adds rounded corners */
+        }
+
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="/homepage" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
+            <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container"> <!-- Adjust padding-top based on the height of your navbar -->
+    <h2>✨&nbsp;&nbsp;L'Oréal Brandstorm Middle East 2023&nbsp;&nbsp;✨</h2>
+    <br>
+    <div class="jumbotron">
+        <h3 style="padding-bottom: 10px;">Project Overview</h3>
+        <p>
+            This year's challenge was titled <strong>"CRACK THE NEW CODES OF BEAUTY – Your playing field: AR, VR, AI & Metaverse."</strong>
+            We wanted to innovate in a space that had been experiencing a big boom due to the pandemic, which had driven a strong demand for educational tools in the beauty industry.        
+        </p>
+        <p>In the rapidly growing market of skincare, what is the right product for your skin? 
+            Our app 'Room' is designed to be your ultimate skincare guide! Our amazing 
+            team, <strong>Pauline Wee</strong>,<strong>Grace Pedroza</strong>, and I have created an AI-powered skincare app to 
+            meet every skincare enthusiast at their point of need.
+        </p>
+    </div>
+
+    <h3 style="padding-bottom: 10px;">Slide Deck</h3>
+    <div class="row">
+        <div class="column">
+          <img src="./static/images/loreal1.png" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="./static/images/loreal2.png" style="width:100%">
+        </div>
+    </div>
+
+    <div class="row">
+          <div class="column">
+            <img src="./static/images/loreal3.png" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="./static/images/loreal5.png" style="width:100%">
+          </div>
+    </div>
+
+
+    <div class="row">
+        <div class="column">
+            <img src="./static/images/loreal6.png" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="./static/images/loreal8.png" style="width:100%">
+          </div>
+    </div>
+
+    <br>
+    <br>
+    <button onclick="openlorealprototype()" type="button" class="btn btn-secondary">Interact with our prototype&nbsp;↗️</button>
+
+</div>
+
+<script>
+    // back button
+    function goBack() {
+        window.history.back();
+    }
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function homepage() {
+        window.location.href = 'homepage.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+
+    function openlorealprototype() {
+        window.open('https://www.figma.com/proto/yDdkaIrbXjzZprXZil3sYa/Loreal?type=design&node-id=223-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=223%3A2&show-proto-sidebar=1', '_blank');
+    }
+
+</script>
+</body>
+
+</html>
+
+

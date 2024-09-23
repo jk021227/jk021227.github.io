@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Oréal</title>
+    <title>Habi</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -106,6 +106,20 @@
             border-radius: 10px; /* Optional: adds rounded corners */
         }
 
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Adds space between the two columns */
+        }
+
+        .left-column, .right-column {
+            width: 48%; /* Ensure both columns take up around half of the container */
+        }
+
+        .left-column{
+            padding-left: 15px;
+        }
+
     </style>
 </head>
 
@@ -121,62 +135,72 @@
         </div>
         <div>
             <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
-            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">Projects</button>
-            <button onclick="location.href = '/work';" ;" type="button" class="btn btn-secondary">Work Experience</button>
-            <button id="aboutButton" onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+            <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button id="aboutButton" onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
     </div>
     </div>
 </nav>
 <!-- Page Content -->
 <div class="container"> <!-- Adjust padding-top based on the height of your navbar -->
-    <h2>✨&nbsp;&nbsp;L'Oréal Brandstorm Middle East 2023&nbsp;&nbsp;✨</h2>
+    <h2>🖌️&nbsp;&nbsp;Designpreneurs Hackathon 2023&nbsp;&nbsp;🖌️</h2>
     <br>
     <div class="jumbotron">
-        <h3 style="padding-bottom: 10px;">Project Overview</h3>
-        <p>
-            This year's challenge was titled <strong>"CRACK THE NEW CODES OF BEAUTY – Your playing field: AR, VR, AI & Metaverse."</strong>
-            We wanted to innovate in a space that had been experiencing a big boom due to the pandemic, which had driven a strong demand for educational tools in the beauty industry.        
-        </p>
-        <p>In the rapidly growing market of skincare, what is the right product for your skin? 
-            Our app 'Room' is designed to be your ultimate skincare guide! Our amazing 
-            team, <strong>Pauline Wee</strong>,<strong>Grace Pedroza</strong>, and I have created an AI-powered skincare app to 
-            meet every skincare enthusiast at their point of need.
-        </p>
+        <div class="content-container">
+            <div class="left-column">
+                <h3 style="padding-bottom: 10px;">Introduction</h3>
+                <p>
+                    Despite the abundance of habit apps, we still struggle to stay on top of our habits. This pair habit app strives to solutionize this modern struggle with a social touch!
+                </p>
+                <p>
+                    Together, <strong>Levith Andrade Cuellar</strong>, <strong>Pauline Wee</strong>, and <strong>Jhon Kim</strong> set out to create an app that helps people stick to their habits despite busy, hectic schedules and forgetfulness.
+                </p> 
+            </div> 
+            <div class="right-column">
+                <h3 style="padding-bottom: 10px;">Product Overview</h3>
+                <p>
+                    After interviewing 15+ people from different backgrounds, we identified that the biggest obstacle was the lack of accountability in being consistent. That's how we came up with <strong>Habi</strong>.
+                </p>
+                <p>    
+                    <strong>Habi</strong> is an app where you pair up with a partner to complete a habit. You keep each other accountable through a shared, quantifiable pet that you nurture together.
+                </p>
+            </div>    
     </div>
+</div>
 
-    <h3 style="padding-bottom: 10px;">Slide Deck</h3>
+    <h3 style="padding-bottom: 10px;">Key Slides</h3>
     <div class="row">
         <div class="column">
-          <img src="{{ url_for('static', filename='images/loreal1.png') }}" style="width:100%">
+          <img src="./static/images/habi15.png" style="width:100%">
         </div>
         <div class="column">
-          <img src="{{ url_for('static', filename='images/loreal2.png') }}" style="width:100%">
+          <img src="./static/images/habi12.png" style="width:100%">
         </div>
     </div>
 
     <div class="row">
           <div class="column">
-            <img src="{{ url_for('static', filename='images/loreal3.png') }}" style="width:100%">
+            <img src="./static/images/habi11.png" style="width:100%">
           </div>
           <div class="column">
-            <img src="{{ url_for('static', filename='images/loreal5.png') }}" style="width:100%">
+            <img src="./static/images/habi13.png" style="width:100%">
           </div>
     </div>
 
 
     <div class="row">
         <div class="column">
-            <img src="{{ url_for('static', filename='images/loreal6.png') }}" style="width:100%">
+            <img src="./static/images/habi14.png" style="width:100%">
           </div>
           <div class="column">
-            <img src="{{ url_for('static', filename='images/loreal8.png') }}" style="width:100%">
+            <img src="./static/images/habi10.png" style="width:100%">
           </div>
     </div>
 
     <br>
     <br>
-    <button onclick="openlorealprototype()" type="button" class="btn btn-secondary">Interact with our prototype&nbsp;↗️</button>
+    <button onclick="openhabiprototype()" type="button" class="btn btn-secondary">Interact with our prototype&nbsp;↗️</button>
 
 </div>
 
@@ -201,8 +225,8 @@
         window.location.href = 'projects.html';
     }
 
-    function openlorealprototype() {
-        window.open('https://www.figma.com/proto/yDdkaIrbXjzZprXZil3sYa/Loreal?type=design&node-id=223-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=223%3A2&show-proto-sidebar=1', '_blank');
+    function openhabiprototype() {
+        window.open('https://www.figma.com/proto/qkICTwOEjRpVjolrwIsEjy/Habi?node-id=20-11038&starting-point-node-id=20%3A11038&t=xDMb8SHmQJBjyzfm-1', '_blank');
     }
 
 </script>

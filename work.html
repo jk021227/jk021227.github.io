@@ -84,9 +84,9 @@
         </div>
         <div>
             <!-- <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button> -->
-            <button onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
-            <button id="workButton" onclick="location.href = '#';" ;" type="button" class="btn btn-secondary">Work Experience</button>
-            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+            <button onclick="location.href = 'projects.html';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button id="workButton" onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
     </div>
     </div>
@@ -139,7 +139,7 @@
 
 <script>
     // Get the current page URL
-    if (window.location.pathname === '/work') {
+    if (window.location.pathname === '/work.html') {
         // If the current page is '/about', apply custom background color
         document.getElementById('workButton').classList.add('active-page');
     }

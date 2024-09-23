@@ -129,9 +129,9 @@
         </div>
         <div>
             <!-- <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button> -->
-            <button id="projButton" onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
-            <button onclick="location.href = '/work';" ;" type="button" class="btn btn-secondary">Work Experience</button>
-            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+            <button id="projButton" onclick="location.href = 'projects.html';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
     </div>
     </div>
@@ -142,66 +142,68 @@
     <h2>⚒️&nbsp;Key Projects&nbsp; ⚒️</h2>
     <div class="projects-container">
         <div class="one-project">
-            <a href="/visa">
-                <img src="{{ url_for('static', filename='images/visa.png') }}" alt="Project 1" />
+            <a href="visa.html">
+                <img src="./static/images/visa.png" alt="Project 1" />
                 <p>Visa Global Intern Case Challenge</p>
             </a>
         </div>
 
         <div class="one-project">
-            <a href="/loreal">
-                <img src="{{ url_for('static', filename='images/loreal.png') }}" alt="Project 2" />
+            <a href="loreal.html">
+                <img src="./static/images/loreal.png" alt="Project 2" />
                 <p>L'Oréal Brandstorm</p>
             </a>
         </div>
     
         <div class="one-project">
-            <a href="/termo">
-                <img src="{{ url_for('static', filename='images/termo.png') }}" alt="Project 3" />
+            <a href="termo.html">
+                <img src="./static/images/termo.png" alt="Project 3" />
                 <p>Termolatío</p>
+            </a>
+        </div>
+
+        <div class="one-project">
+            <a href="feels.html">
+                <img src="./static/images/feels.png" alt="Project 4" />
+                <p>Ponyo Feels - Facial Recognition</p>
             </a>
         </div>
     
         <div class="one-project">
-            <a href="/designpreneurs">
-                <img src="{{ url_for('static', filename='images/habi.png') }}" alt="Project 4" />
+            <a href="designpreneurs.html">
+                <img src="./static/images/habi.png" alt="Project 5" />
                 <p>Designpreneurs Hackathon</p>
             </a>
         </div>
 
         <div class="one-project">
-            <a href="/neuro">
-                <img src="{{ url_for('static', filename='images/neuro.png') }}" alt="Project 5" />
+            <a href="neuro.html">
+                <img src="./static/'images/neuro.png" alt="Project 6" />
                 <p>Ponyo - Neurodivergence Aid</p>
             </a>
         </div>
 
         <div class="one-project cropped-image">
-            <a href="/plant">
-                <img src="{{ url_for('static', filename='images/plants.png') }}" alt="Project 6" />
+            <a href="plant.html">
+                <img src="./static/images/plants.png" alt="Project 7" />
                 <p>Ponyo Plants - Plant Health</p>
             </a>
         </div>
 
         <div class="one-project">
-            <a href="/recipe">
-                <img src="{{ url_for('static', filename='images/recipe.png') }}" alt="Project 7" />
+            <a href="recipe.html">
+                <img src="./static/images/recipe.png" alt="Project 8" />
                 <p>Ponyo Cook - CRUD</p>
             </a>
         </div>
 
-        <div class="one-project">
-            <a href="/feels">
-                <img src="{{ url_for('static', filename='images/feels.png') }}" alt="Project 8" />
-                <p>Ponyo Feels - Facial Recognition</p>
-            </a>
-        </div>
+
     </div>
 </div>
 
 <script>
     // Get the current page URL
-    if (window.location.pathname === '/projects') {
+    if (window.location.pathname === '/projects.html') {
         // If the current page is '/about', apply custom background color
         document.getElementById('projButton').classList.add('active-page');
     }

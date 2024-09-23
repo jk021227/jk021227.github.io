@@ -101,9 +101,9 @@
         </div>
         <div>
             <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
-            <button onclick="location.href = '/projects';" ;" type="button" class="btn btn-secondary">Projects</button>
-            <button id="workButton" onclick="location.href = '#';" ;" type="button" class="btn btn-secondary">Work Experience</button>
-            <button onclick="location.href = '/about';" ;" type="button" class="btn btn-secondary">About Me</button>
+            <button onclick="location.href = 'projects.html';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
     </div>
     </div>
@@ -132,10 +132,10 @@
     <h3>Preview</h3>
     <p style="margin-bottom:10px;">Here are some screenshots of the command line interface (CLI) that exemplify how Termolatío works.<br>
     <strong>Input:</strong> Termolatío's friendly robot mascot greets you and asks for your input files.</p>
-    <img src="{{ url_for('static', filename='images/term1.png') }}" style="border-radius:10px;" alt="input" width="50%"/>
+    <img src="./static/images/term1.png" style="border-radius:10px;" alt="input" width="50%"/>
     <br>
     <p style="margin-bottom:10px;"><strong>Output:</strong> Termolatío is "done cooking" and tells you what your result files have been named.</p>
-    <img src="{{ url_for('static', filename='images/term2.png') }}" style="border-radius:15px;" alt="output" width="50%"/>
+    <img src="./static/images/term2.png" style="border-radius:15px;" alt="output" width="50%"/>
     <br>
     <p>Termolatío does all of the hard work by leveraging a variety of Python files in the background which it runs via the <a href="/termolatío/run_termolator_spanish.sh">run_termolator_spanish.sh</a> bash file.</p>
 </div>
