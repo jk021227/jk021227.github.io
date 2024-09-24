@@ -84,6 +84,10 @@ img {
     margin-right: 20px;
     max-width: 100%; /* Ensure image does not exceed the container width */
     height: auto; /* Maintain aspect ratio */
+    width: 375px;
+    height: 430px; 
+    margin-top: 50px;
+    border-radius: 13px;
 }
 
 .heart {
@@ -103,6 +107,15 @@ img {
         transform: translateY(-15px); /* Upward jump */
     }
 }
+
+.jumbotron {
+    background-color: #cbefff;
+    margin: 0 0 0 85px;
+    padding: 60px 40px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px rgba(0, 135, 198, 0.8), -5px -5px 10px rgba(0, 135, 198, 0.2);
+}
+
     </style>
 </head>
 
@@ -131,7 +144,7 @@ img {
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <div class="jumbotron" style="background-color:  #cbefff; margin:0 0 0 85px;" >
+                <div class="jumbotron">
                     <h2 style="font-size: 40px; padding-left:10px;">
                         <span class="heart">Hello 🦋</span>
                     </h2>
@@ -149,7 +162,7 @@ img {
                     </p>                    
                 </div>
             </div>
-            <img src="./static/images/me.png" style="width: 375px; height: 430px; margin-top: 50px;">
+            <img src="./static/images/me.png">
         </div>
     </div>
 
