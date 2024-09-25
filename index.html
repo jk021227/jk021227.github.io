@@ -10,6 +10,11 @@
     
     <style>
 
+html {
+    /* this is how we get a full sized fixed centered background */
+    background: url('./static/images/just-waves.webp') no-repeat center center fixed;
+    background-size: cover;
+}  
 img {
     display: block;
     margin-left: 80px;
@@ -53,7 +58,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0fbff
+    background: #f0fbff url('./static/images/snowing.gif') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .btn-secondary {
@@ -120,7 +126,6 @@ img {
 </head>
 
 <body>
-
     <nav class="navbar fixed-top navbar-light">
         <div class="container-fluid d-flex justify-content-between">
             <div>
@@ -162,7 +167,7 @@ img {
                     </p>                    
                 </div>
             </div>
-            <img src="./static/images/me.png">
+            <img src="./static/images/me.webp">
         </div>
     </div>
 
