@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponyo Feels</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="./css/work.css"/>
+    
+       
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h2{
+            font-size: 20px;
+        }
+        
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+    
+        .container {
+            margin: 100px 100px 55px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-secondary {
+            /* background-color:  #0000ff;  */
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+    
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+    
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light blue background */
+        }
+    
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+
+        code{
+            color: #0087c6;
+        }
+
+        img {
+            width: 60%;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
+            <button onclick="location.href = 'projects.html';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <h1>🎀 EmpowHer: Pink Tax Analysis 💸</h1>
+
+    <h2>✨ Description</h2>
+    
+    <p>Welcome to the <code>EmpowHer</code>, a program where you can learn more about <strong>Pink Tax</strong>!✨ If you've never heard about Pink Tax, it's basically the extra cost added to products marketed to women, even when they are nearly identical to men's. 😤 This project was created to help expose those price differences. By analyzing the prices of men's and women's personal care products, we break down the differences using web-scraping, color analysis (think <em>pretty-in-pink</em> 🌸), and good old data visualization! 📊</p>
+    
+    <p>The core features include:</p>
+    
+    <ul>
+      <li><strong>Data Scraping</strong>🕵️‍♀️ : <code>Selenium</code> is used to scrape Target for product info like names, brands, prices, and images. If you'd like, you can un-comment the code starting from <strong>line 149</strong> in <code>main.py</code> to scrape other options like shampoo. In case you’re not in the mood to wait ⏳ for the scraping process, I've already created a sample database using the <strong>razors</strong> and <strong>deodorant</strong> options.</li>
+      <li><strong>"Girly" Color Detection</strong>: Using Clarifai’s API, we check if a razor’s packaging or design screams <em>girly</em> by looking for color shades of pink, purple, or red.</li>
+      <li><strong>Price Analysis</strong>: When razor prices come in ranges, we calculate the average and show a visual representation of price disparities between girly and non-girly razors. 🛒</li>
+    </ul>
+    
+    <h2>🧪 Dependencies</h2>
+    
+    <p>To use <code>EmpowHer</code>, you'll need a couple of things:</p>
+    
+    <ul>
+      <li><strong>Clarifai API</strong>: This is what makes the magic happen when it comes to color detection! 🌈 If you don’t have a <em>Clarifai</em> account yet, go create one at <a href="https://clarifai.com/explore">Clarifai Explore</a> and grab yourself a <strong>Personal Access Token</strong> from the <em>Security Tab</em> under your account settings. 🔐</li>
+    </ul>
+    
+    <p><strong>Note</strong>: On the free <em>Community Level Subscription</em>, you get <strong>1,000 API calls per month</strong>. 🆓 That was more than enough for me when I tested out all the options but if you want to use it on a larger database that exceeds 1000 rows, you'll have to upgrade to a paid subscription tier 😭</p>
+    
+    <ul>
+      <li><strong>Selenium</strong>: 🕸️ To scrape the product data from Target.</li>
+      <li><strong>Pandas</strong> & <strong>Matplotlib</strong>: For all things data wrangling and visualization. 🐼</li>
+    </ul>
+    
+    <p>Make sure to check the <code>requirements.txt</code> file to get everything installed smoothly. 🛠️</p>
+    
+    <h2>💻 Installation</h2>
+    
+    <p>Let’s get you started! 🚀 Follow these steps to set everything up:</p>
+    
+    <ol>
+      <li><strong>Clone the repo</strong> to your local machine:
+        <pre><code>git clone https://github.com/jk021227/EmpowHer.git
+    cd repository
+    </code></pre>
+      </li>
+      <li><strong>Create a virtual environment</strong>:
+        <pre><code>python -m venv .venv
+    source .venv/bin/activate
+    </code></pre>
+      </li>
+      <li><strong>Install the necessary libraries</strong>:
+        <pre><code>pip install -r requirements.txt
+    </code></pre>
+      </li>
+      <li><strong>Create a <code>.env</code> file</strong> with your personal access token from Clarifai! It should look like this:
+        <pre><code>PAT=YOUR_PAT_KEY
+    </code></pre>
+        Replace <code>YOUR_PAT_KEY</code> with your actual PAT key. 🎟️ In case it's a bit confusing, think of a <strong>PAT</strong> key as the same as an <strong>API</strong> key.
+      </li>
+    </ol>
+    
+    <h2>🤏 How to run it from scratch</h2>
+    
+    <ol>
+      <li><strong>Uncomment from line 149 onwards in <code>main.py</code></strong>
+        <ul>
+          <li>After uncommenting, run the following command in your terminal (make sure you're inside your virtual environment):
+            <pre><code>python main.py
+    </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Choose an option:</strong>
+        <p>When you run the script, you'll see a welcome message in the terminal like this:</p>
+        <pre><code>💕 Welcome to Pink Tax 101 💕
+       
+    Have you ever heard about the 'Pink Tax'? 🤔
+    It's that sneaky little extra charge applied to products marketed toward women, even though similar products for men often cost less. 😠
+    
+    Let's dive in and explore how much more women pay for basic items like razors, shampoo, and deodorant.
+    
+    You get to pick a category, and we'll show you just how real the Pink Tax is! 💸
+    
+    Ready to see the price differences? Let's start scraping! 🚀
+    
+    Pick a category:
+    1. Shampoo
+    2. Razors
+    3. Deodorant
+    
+    Enter the number of the category you want to explore:
+    </code></pre>
+      </li>
+      <li><strong>Update file paths for the category you choose & run <code>python api.py</code> in terminal</strong>
+        <ul>
+          <li>Modify <strong>line 13</strong> of <code>api.py</code> to choose the correct csv file generated by the web scraping, currently, it is like this since I ran it for the 3rd option last:
+            <pre><code>file_name = 'deodorant_products.csv'
+    </code></pre>
+          </li>
+          <li>Based on your selection, this will generate an <code>(option)_updated_file.csv</code> file. This file will have an added boolean column (<code>is_girly</code>) to the database.</li>
+        </ul>
+      </li>
+      <li><strong>Run the analysis script</strong>
+        <ul>
+          <li>So, I’ve already whipped up the databases for <strong>razors</strong> and <strong>deodorant</strong>, so the only option you could have probably scraped is the shampoo one. 🤔 <em>Totally not</em> because I ran out of API calls... <em>cough cough</em> 🙈.</li>
+          <li>Open <code>product_analysis.py</code> and go ahead and <strong>uncomment line 10</strong> and <strong>lines 30–33</strong> to add shampoo as an option to the Pink Tax analysis. Now, run the analysis in your terminal:
+            <pre><code>python product_analysis.py
+    </code></pre>
+          </li>
+          <li>Here is a sample walkthrough of what that would look like:
+            <ol>
+              <li><img src="./static/images/fig3.webp" alt="Pink Tax Analysis Figure 1"></li>
+              <li><img src="./static/images/fig1.webp" alt="Pink Tax Analysis Figure 2"></li>
+              <li><img src="./static/images/fig2.webp" alt="Pink Tax Analysis Figure 3"></li>
+            </ol>
+          </li>
+        </ul>
+        <br>
+        <p>🎉 Viola! You've now got the analysis and visuals on how the Pink Tax affects the chosen category.</p>
+      </li>
+      <li>Feel outraged 😡 or laugh nervously 😅 at the results.</li>
+    </ol>
+    
+    <h2>🔮 Purpose & Impact</h2>
+    
+    <p><code>EmpowHer</code> will produce some pretty graphs (okay, maybe not <em>pretty</em>, but informative 👉 👈). It's an educational tool that can help people become more empowered consumers. It's important to not let these corporate giants overcharge you!</p>
+    
+    <h2>🛠️ Extensions</h2>
+    
+    <ul>
+      <li>🌟 <strong>More Product Categories</strong>: Currently, it has only 3 categories, but those are just the ones that Pink Tax affects the most, you can extend the program with very minor tweaks to include research about other products as well. Maybe belts next❓</li>
+    </ul>    
+    <br>
+    <button onclick="openempowher()" type="button" class="btn btn-secondary">Link to project&nbsp;↗️</button>
+
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+
+    function openempowher() {
+        window.open('https://github.com/jk021227/EmpowHer', '_blank');
+    }
+</script>
+</body>
+
+</html>
