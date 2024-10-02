@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sweetcode</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="./css/work.css"/>
+    
+       
+    <style>
+
+        h1{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h2{
+            font-size: 20px;
+        }
+        
+        p{
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background-color:  #f0fbff
+        }
+    
+        .container {
+            margin: 100px 100px 55px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-secondary {
+            /* background-color:  #0000ff;  */
+            background-color: #0cb2ff;
+            border-color: #0cb2ff; /* Button border color */
+            color: white; /* Text color */
+            margin-right: 3px;
+        }
+    
+        .btn-secondary:last-child {
+            margin-right: 0;
+        }
+    
+        .btn-secondary:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+            border-color: #0cb2ff;/* Button border color */
+        }
+        
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #cbefff !important; /* Light blue background */
+        }
+    
+        .active-page {
+            color: white; /* Optional: Set text color to white for contrast */
+            background-color: #0087c6; /* Slightly darker color for hover effect */
+            border-color: #0087c6;/* Button border color */
+        }
+
+        code{
+            color: #0087c6;
+        }
+
+        img {
+            width: 60%;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <h1 class="navbar-brand mb-0 h1">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                  🩵 Jhon's Sky Studio 🩵
+                </a>
+            </h1>  
+            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+        </div>
+        <div>
+            <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>
+            <button onclick="location.href = 'projects.html';" ;" type="button" class="btn btn-secondary">Projects</button>
+            <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
+            <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container">
+        <h1>🍭 sweetcode: Gamifying Computer Science for Girls 💻</h1>
+        <p><strong>Team members:</strong> <code>Pauline Wee</code> and <code>Jhon Kim</code></p>
+        <h2>💡 Inspiration</h2>
+        <p>
+            We were inspired by the challenge of making complex data structures and algorithms more relatable and fun, especially for young girls and minority women who feel intimidated by the scary interface of Leetcode and other technical interviewing tools. 
+            We wanted to create an engaging way for learners to grasp these concepts, so we infused storytelling into our project. This is our gateway for fixing the leaky faucet of girls who don't feel like they belong in Computer Science. 👩‍💻💖
+        </p>
+    
+        <h2>🎮 What It Does</h2>
+        <p>
+            <code>sweetcode</code> is our creative take on gamifying computer science concepts for young girls to help increase diversity in tech. 🌈 In our interactive world, players help villagers in <strong>Tree Town</strong> organize their ancient scrolls while solving challenges related to <strong>Binary Trees</strong>, <strong>AVL Trees</strong>, and <strong>Red-Black Trees</strong> 🌳📜. 
+            We also added <strong>Interview Isle</strong> where you can practice concepts and get real-time feedback! 🏝️🎤
+        </p>
+    
+        <h2>🚧 Challenges We Ran Into</h2>
+        <p>
+            One of our biggest challenges was finding the right balance between the complexity of computer science concepts and making the narrative engaging 🎭📚. 
+            We also faced hurdles in maintaining interactive elements while ensuring our UI remained responsive 📱.
+        </p>
+    
+        <h2>🌟 What's Next for Sweetcode</h2>
+        <p>
+            Looking ahead, we plan to expand our adventure to new regions like <strong>Graph Grove</strong> 🌲📊, introduce multiplayer features 👯, and include even more complex algorithms to challenge our advanced learners. 
+            We're excited about the future of <code>sweetcode</code>! 🚀✨
+        </p>
+    
+        <h2>🔧 Built With</h2>
+        <ul>
+            <li>🐍 Python Flask</li>
+            <li>🤖 OpenAI API</li>
+            <li>💻 MongoDB</li>
+            <li>⚛️ React</li>
+            <li>🎨 Tailwind CSS</li>
+        </ul>
+
+        <h2>🏆 Best Use of MongoDB Award</h2>
+        <p> 
+            We were honored to receivd the award for best database: <br>
+            <img style="width: 35%; height: auto;" src="./static/images/award.webp" alt="award" />
+        </p>
+
+    <br>
+    <button onclick="linktodemo()" type="button" class="btn btn-secondary">Link to demo&nbsp;↗️</button>
+
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function about() {
+        window.location.href = 'about.html';
+    }
+
+    function work() {
+        window.location.href = 'work.html';
+    }
+
+    function projects() {
+        window.location.href = 'projects.html';
+    }
+
+    function linktodemo() {
+        window.open('https://drive.google.com/file/d/1GTI-orHC-6ktGU6Ao4TB587ImI84Xhr0/view', '_blank');
+    }
+</script>
+</body>
+
+</html>
