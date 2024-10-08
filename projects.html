@@ -11,6 +11,14 @@
        
     <style>
 
+.mobile-menu {
+    display: none;
+  }
+
+#mob-menu {
+    display: none; 
+}
+
         h1{
             font-family: 'Oxygen Mono', monospace;
             font-size: 25px;
@@ -101,18 +109,125 @@
             box-sizing: border-box;
         }
 
-        @media (max-width: 768px) {
-            .one-project {
-                width: 100%; /* Stacks the projects on smaller screens */
-            }
-        }
-
         img {
             width: 100%;
             height: 100%; /* Or a defined height to force proper cropping */
             object-fit: cover; /* This will crop the transparent parts */
             object-position: center; /* Center the image within the container */
         }
+
+    @media only screen and (max-width: 767px) {
+        /* showing mobile menu when 'show' class is added */
+        #mob-menu.show {
+            display: block;
+        }
+        .btn-secondary {
+      display: none;
+    }
+
+        h1 {
+            margin: 1rem;
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 20px;
+        }
+
+        .navbar-brand a {
+            margin-bottom: 1rem; /* Add padding around the link */
+            display: inline-block; /* Make the link a block-level element to apply padding */
+        }
+        
+        p.mb-0 {
+            display: none !important;
+        }
+
+        .mobile-menu { /* hamburger menu icon */
+      position: absolute;
+      right: 1rem;
+      top: -.7rem;
+      display: block;
+      font-size: 3.5rem;
+      color: #0cb2ff; 
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .mobile-menu:hover {
+      color: #0087c6; /* changes color on hover */
+    }
+
+    #mob-menu { /* mobile menu */
+      display: column; /* stacking the menu items vertically on mobile. */
+      width: 100%; /* making menu take up the full width of the screen on mobile. */
+      text-align: center; /* centering menu items. */
+    }
+
+    #mob-menu .mob-menu-inside {
+      list-style-type: none; /* removing bullet points from list */
+      text-align: center; /* centering the list items */
+    }
+
+    #mob-menu .mob-menu-inside li {
+      border-top: 2px solid rgba(12, 178, 255, 0.2);
+
+    }
+
+    #mob-menu .mob-menu-inside li a {
+      display: block; /* making the link take up the full width */
+      padding: 15px 0; 
+      background-color:   #cbefff; /* button's bg color */
+      color: black; /* text color */
+      font-family: 'Oxygen Mono', monospace;    
+      font-weight: 400;
+      font-size: 1em; /* font size */
+      text-decoration: none; /* removing underline */
+      transition: background-color 0.3s ease; 
+    }
+
+    #mob-menu .mob-menu-inside li a:hover {
+      background-color:#e0f6ff; /* changing color on hover */
+    }
+
+    .mob-menu-inside {
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar {
+        padding: 0; /* Remove padding from navbar */
+    }
+
+    .navbar .container-fluid {
+        padding: 0; /* Remove padding from the container */
+    }
+
+
+        .one-project {
+            width: 100%; /* Stacks the projects on smaller screens */
+            padding: 5px 15px;
+        }
+
+        .one-project p {
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 17px;
+            position: relative;
+            width: 100%;
+            bottom: 35px; /* Adjust this value to move the text up or down */
+            text-align: center;
+            color: white;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .one-project img {
+            width: 100%;
+            height: auto;
+            border: 10px solid #0cb2ff;
+            border-bottom-width: 45px;
+            overflow: hidden;
+        }
+        
+
+    }
 
     </style>
 </head>
@@ -133,6 +248,15 @@
             <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
             <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
+
+        <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+        <nav id="mob-menu">
+            <ul class="mob-menu-inside">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
     </div>
     </div>
 </nav>
@@ -164,7 +288,7 @@
         
         <div class="one-project">
             <a href="feels.html">
-                <img src="./static/images/feels1-1.webp" alt="Project 4" style="overflow: hidden; height: 100%; width: 500px;"/>
+                <img src="./static/images/feels1-1.webp" alt="Project 4" style="overflow: hidden; height: 100%;"/>
                 <p>Ponyo Feels: Facial Recognition</p>
             </a>
         </div>
@@ -233,6 +357,10 @@
     function projects() {
         window.location.href = 'projects.html';
     }
+
+    function toggleMenu() {
+        document.getElementById('mob-menu').classList.toggle('show')
+      }
 </script>
 </body>
 

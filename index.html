@@ -10,16 +10,18 @@
     
     <style>
 
-img {
-    display: block;
-    margin-left: 80px;
-    margin-right: 20px;
-    border-radius: 5px;
-}
-
 h1 {
     font-family: 'Oxygen Mono', monospace;
     font-size: 25px;
+}
+
+body{
+    margin: 0;
+}
+
+
+.jumbotron h2 {
+    font-size: 40px;
 }
 
 p{
@@ -27,34 +29,44 @@ p{
     font-size: 15px;
 }
 
-
-.col-md-6 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-left: 40px; 
-}
-
 .container {
-    text-align: center;
-    margin: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem; /* Adds padding of 2rem inside the container. */
+    display: flex; /* Makes the container a flexbox. */
+    flex-direction: row; /* Aligns the flex items in a horizontal row. */
+    justify-content: space-between; /* Spreads the flex items out evenly with space between them. */
+    flex-wrap: wrap; /* Allows the items to wrap onto a new line if there's not enough space. */
 }
+
+ .left-col, .right-col {
+    width: 50%; /* each column will take up nearly half of the container on desktop */
+  }
+
+  .right-col {
+    margin-top: 5.5em;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .left-col {
+    display: flex; 
+    margin-top:7.5em;
+    justify-content: right;
+    align-items: center;
+  }
+
 
 body {
     margin: 0;
     padding: 0;
+    background: #f0fbff url('./static/images/snowing.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #f0fbff url('./static/images/snowing.gif') no-repeat center center fixed;
-    background-size: cover;
+    padding-left: 3em;
 }
 
 .btn-secondary {
@@ -80,15 +92,10 @@ body {
 }
 
 img {
-    display: block;
-    margin-left: 80px;
-    margin-right: 20px;
-    max-width: 100%; /* Ensure image does not exceed the container width */
-    height: auto; /* Maintain aspect ratio */
-    width: 375px;
-    height: 430px; 
-    margin-top: 50px;
+    max-width: 70%;
+    height: auto;
     border-radius: 13px;
+    border: 5px double #0087c6;
 }
 
 .heart {
@@ -111,15 +118,175 @@ img {
 
 .jumbotron {
     background-color: #cbefff;
-    margin: 0 0 0 85px;
-    padding: 60px 40px;
+    width:90%;
+    padding:3.2em 2.5em 2em 3em;
     border-radius: 10px;
     box-shadow: 8px 8px 15px rgba(0, 135, 198, 0.8), -5px -5px 10px rgba(0, 135, 198, 0.2);
 }
 
-    </style>
-</head>
+.para1 {
+    font-size: 25px;
+}
 
+.para2 {
+    font-size: 18px;
+}
+
+.mobile-menu {
+    display: none;
+  }
+
+#mob-menu {
+    display: none; 
+}
+
+
+
+
+/* Anything smaller than an iPad classic = mobile phone size */
+@media only screen and (max-width: 767px) {
+    .container-fluid {
+        box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
+    }
+
+    .container {
+        padding: 2rem; /* Adds padding of 2rem inside the container. */
+        display: flex; /* Makes the container a flexbox. */
+        flex-direction: column; /* Aligns the flex items in a horizontal row. */
+        flex-wrap: wrap; /* Allows the items to wrap onto a new line if there's not enough space. */
+    }
+
+    /* showing mobile menu when 'show' class is added */
+    #mob-menu.show {
+      display: block;
+    }
+
+    .left-col, .right-col {
+      width: 100%;
+    }
+
+    .right-col {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-col {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+    }
+
+    .jumbotron {
+        margin-top: 5rem;
+    }
+
+    .jumbotron h2 {
+        font-size: 30px;
+    }
+
+    h1 {
+        margin: 1rem;
+        font-family: 'Oxygen Mono', monospace;
+        font-size: 20px;
+    }
+
+    .navbar-brand a {
+        margin-bottom: 1rem; /* Add padding around the link */
+        display: inline-block; /* Make the link a block-level element to apply padding */
+    }
+    .para1 {
+        font-size: 18px;
+    }
+
+    .para2 {
+        font-size: 15px;
+    }
+
+    .btn-secondary {
+      display: none;
+    }
+
+    p.mb-0 {
+        display: none !important;
+    }
+
+
+    .mobile-menu { /* hamburger menu icon */
+      position: absolute;
+      right: 1rem;
+      top: -.7rem;
+      display: block;
+      font-size: 3.5rem;
+      color: #0cb2ff; 
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .mobile-menu:hover {
+      color: #0087c6; /* changes color on hover */
+    }
+
+    #mob-menu { /* mobile menu */
+      display: column; /* stacking the menu items vertically on mobile. */
+      width: 100%; /* making menu take up the full width of the screen on mobile. */
+      text-align: center; /* centering menu items. */
+    }
+
+    #mob-menu .mob-menu-inside {
+      list-style-type: none; /* removing bullet points from list */
+      text-align: center; /* centering the list items */
+    }
+
+    #mob-menu .mob-menu-inside li {
+      border-top: 2px solid rgba(12, 178, 255, 0.2);
+
+    }
+
+    #mob-menu .mob-menu-inside li a {
+      display: block; /* making the link take up the full width */
+      padding: 15px 0; 
+      background-color:   #cbefff; /* button's bg color */
+      color: black; /* text color */
+      font-family: 'Oxygen Mono', monospace;    
+      font-weight: 400;
+      font-size: 1em; /* font size */
+      text-decoration: none; /* removing underline */
+      transition: background-color 0.3s ease; 
+    }
+
+    #mob-menu .mob-menu-inside li a:hover {
+      background-color:#e0f6ff; /* changing color on hover */
+    }
+
+    .mob-menu-inside {
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar {
+        padding: 0; /* Remove padding from navbar */
+    }
+
+    .navbar .container-fluid {
+        padding: 0; /* Remove padding from the container */
+    }
+
+
+}
+
+</style>
+
+
+</head>
 <body>
     <nav class="navbar fixed-top navbar-light">
         <div class="container-fluid d-flex justify-content-between">
@@ -131,40 +298,53 @@ img {
                 </h1>                  
                 <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
             </div>
+
             <div>
                 <button onclick="location.href = 'projects.html';" type="button" class="btn btn-secondary">Projects</button>
                 <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
                 <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
             </div>
-        </div>
+
+            <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+            <nav id="mob-menu">
+                <ul class="mob-menu-inside">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="work.html">Work Experience</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+            </nav>
         </div>
     </nav>
 
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="jumbotron">
-                    <h2 style="font-size: 40px; padding-left:10px;">
-                        <span class="heart">Hello 🦋</span>
-                    </h2>
-                    <p style="font-size: 25px; padding-left:10px;">
-                        My name is Jhon Kim, a software engineer & product manager that loves to craft 'n get creative :) 
-                    </p>
-                    <p style="font-size:18px; padding-left:10px;"> 
-                        <strong>Major:</strong> Computer Science <br>
-                        <strong>Minor:</strong> Interactive Media & Legal Studies </p>
-                    </p>
-                    <p style="padding-left:10px;">
-                        <button onclick="location.href = 'https://www.linkedin.com/in/youngducando';" class="btn btn-secondary">LinkedIn</button>
-                        <button onclick="location.href = 'https://github.com/jk021227';" class="btn btn-secondary">Github</button>
-                        <button onclick="location.href = 'mailto:ykim021227@gmail.com';" class="btn btn-secondary">Email</button>
-                    </p>                    
-                </div>
+    <main class="container">
+
+        <div class="left-col">
+            <div class="jumbotron">
+                <h2>
+                    <span class="heart">Hello 🦋</span>
+                </h2>
+                <p class="para1">
+                    My name is Jhon Kim, a software engineer & product manager that loves to craft 'n get creative :) 
+                </p>
+                <p class="para2">
+                    <strong>Major:</strong> Computer Science <br>
+                    <strong>Minor:</strong> Interactive Media & Legal Studies </p>
+                </p>
+                <p>
+                    <button onclick="location.href = 'https://www.linkedin.com/in/youngducando';" class="btn btn-secondary">LinkedIn</button>
+                    <button onclick="location.href = 'https://github.com/jk021227';" class="btn btn-secondary">Github</button>
+                    <button onclick="location.href = 'mailto:ykim021227@gmail.com';" class="btn btn-secondary">Email</button>
+                </p>                    
             </div>
-            <img src="./static/images/me.webp">
         </div>
-    </div>
+
+        <div class="right-col">
+            <div class="img-container">
+                <img src="./static/images/me.webp">
+            </div>
+        </div>
+
+    </main>
 
 </body>
 
@@ -182,4 +362,8 @@ img {
     function projects() {
         window.location.href = 'projects.html';
     }
+
+    function toggleMenu() {
+        document.getElementById('mob-menu').classList.toggle('show')
+      }
 </script>
