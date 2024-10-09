@@ -142,10 +142,8 @@
             display: none;
         }
 
-        h1 {
-            margin: 1rem;
-            font-family: 'Oxygen Mono', monospace;
-            font-size: 20px;
+        h3 {
+            font-size: 23px;
         }
 
         .navbar-brand a {
@@ -221,9 +219,17 @@
         flex-direction: column; /* Stacking the image and text on top of each other */
         justify-content: center; /* Space between the image and the text */
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
+
+    .image-text-container img {
+            margin-top: 1rem;
+            width: 320px;
+            height: auto;
+        }
     .text-content {
-        margin: 1rem 2rem;
+        margin: 0 1.5rem;
     }
 
     .jumbotron {
@@ -278,7 +284,9 @@
 <div class="container"> <!-- Adjust padding-top based on the height of your navbar -->
 
     <div class="image-text-container">
+        <div class="image-contaier">
         <img src="./static/images/visa1.webp" alt="Visa Internship" />
+        </div>
         <div class="text-content">
             <h3>Internship Overview 🌠</h3>
             <p>
