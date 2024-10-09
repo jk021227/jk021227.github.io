@@ -12,6 +12,14 @@
 
     <style>
 
+.mobile-menu {
+    display: none;
+  }
+
+#mob-menu {
+    display: none; 
+}
+
         h1{
             font-family: 'Oxygen Mono', monospace;
             font-size: 25px;
@@ -115,6 +123,126 @@
             line-height: 1.6; /* Optional: for better readability */
         }
 
+@media only screen and (max-width: 767px) {
+
+    .container-fluid {
+        box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
+    }
+
+        h1 {
+                margin: 1rem;
+                font-family: 'Oxygen Mono', monospace;
+                font-size: 20px;
+            }
+        /* showing mobile menu when 'show' class is added */
+        #mob-menu.show {
+            display: block;
+        }
+        .btn-secondary {
+            display: none;
+        }
+
+        h1 {
+            margin: 1rem;
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 20px;
+        }
+
+        .navbar-brand a {
+            margin-bottom: 1rem; /* Add padding around the link */
+            display: inline-block; /* Make the link a block-level element to apply padding */
+        }
+        
+        p.mb-0 {
+            display: none !important;
+        }
+
+        .mobile-menu { /* hamburger menu icon */
+      position: absolute;
+      right: 1rem;
+      top: -.7rem;
+      display: block;
+      font-size: 3.5rem;
+      color: #0cb2ff; 
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .mobile-menu:hover {
+      color: #0087c6; /* changes color on hover */
+    }
+
+    #mob-menu { /* mobile menu */
+      display: column; /* stacking the menu items vertically on mobile. */
+      width: 100%; /* making menu take up the full width of the screen on mobile. */
+      text-align: center; /* centering menu items. */
+    }
+
+    #mob-menu .mob-menu-inside {
+      list-style-type: none; /* removing bullet points from list */
+      text-align: center; /* centering the list items */
+    }
+
+    #mob-menu .mob-menu-inside li {
+      border-top: 2px solid rgba(12, 178, 255, 0.2);
+
+    }
+
+    #mob-menu .mob-menu-inside li a {
+      display: block; /* making the link take up the full width */
+      padding: 15px 0; 
+      background-color:   #cbefff; /* button's bg color */
+      color: black; /* text color */
+      font-family: 'Oxygen Mono', monospace;    
+      font-weight: 400;
+      font-size: 1em; /* font size */
+      text-decoration: none; /* removing underline */
+      transition: background-color 0.3s ease; 
+    }
+
+    #mob-menu .mob-menu-inside li a:hover {
+      background-color:#e0f6ff; /* changing color on hover */
+    }
+
+    .mob-menu-inside {
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar {
+        padding: 0; /* Remove padding from navbar */
+    }
+
+    .navbar .container-fluid {
+        padding: 0; /* Remove padding from the container */
+    }
+
+    .image-text-container {
+        flex-direction: column; /* Stacking the image and text on top of each other */
+        justify-content: center; /* Space between the image and the text */
+        align-items: center;
+    }
+    .text-content {
+        margin: 1rem 2rem;
+    }
+
+    .jumbotron {
+        margin: 0 1rem 1rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%; /* Make columns take full width */
+    }
+
+    .right-column {
+        padding-left: 1rem;
+    }
+}
+
     </style>
 </head>
 
@@ -134,6 +262,15 @@
             <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
             <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
+
+        <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+        <nav id="mob-menu">
+            <ul class="mob-menu-inside">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
     </div>
     </div>
 </nav>
@@ -202,6 +339,10 @@
     function projects() {
         window.location.href = 'projects.html';
     }
+
+    function toggleMenu() {
+        document.getElementById('mob-menu').classList.toggle('show')
+      }
 
 </script>
 </body>

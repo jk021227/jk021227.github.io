@@ -12,6 +12,10 @@
        
     <style>
 
+#mob-menu {
+    display: none; 
+}
+
         h1{
             font-family: 'Oxygen Mono', monospace;
             font-size: 25px;
@@ -85,6 +89,147 @@
         code{
             color: #0087c6;
         }
+        
+        img {
+            width: 60%;
+        }
+
+        .mobile-visible {
+        background-color: #0cb2ff;
+        color: white; /* Text color */
+        margin-right: 3px;
+        border-radius: 5px;
+        padding: 8px;
+        border: none;
+    }
+
+    .mobile-visible:hover {
+        background-color:#0087c6; /* Slightly darker color for hover effect */
+    }
+
+@media only screen and (max-width: 767px) {
+    .mobile-visible {
+        background-color: #0cb2ff;
+        color: white; 
+        border-radius: 5px;
+        padding: 8px;
+        border: none;
+    }
+
+    .mobile-visible:hover {
+        background-color:#0087c6; /* Slightly darker color for hover effect */
+    }
+    
+    .mobile-menu {
+    display: none;
+  }
+
+
+            img {
+                width: 100%;
+            }
+            
+            h2{
+                font-family: 'Oxygen Mono', monospace;
+                font-size: 20px;
+            }
+        
+        .container-fluid {
+            box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
+        }
+        
+            h1 {
+                    margin: 1rem;
+                    font-family: 'Oxygen Mono', monospace;
+                    font-size: 20px;
+                }
+            /* showing mobile menu when 'show' class is added */
+            #mob-menu.show {
+                display: block;
+            }
+            .btn-secondary {
+                display: none;
+            }
+        
+            .navbar-brand a {
+                margin-bottom: 1rem; /* Add padding around the link */
+                display: inline-block; /* Make the link a block-level element to apply padding */
+            }
+            
+            p.mb-0 {
+                display: none !important;
+            }
+        
+            .mobile-menu { /* hamburger menu icon */
+                position: absolute;
+                right: 1rem;
+                top: -.7rem;
+                display: block;
+                font-size: 3.5rem;
+                color: #0cb2ff; 
+                cursor: pointer;
+                transition: color 0.3s ease;
+                }
+        
+        .mobile-menu:hover {
+          color: #0087c6; /* changes color on hover */
+        }
+        
+        #mob-menu { /* mobile menu */
+          display: column; /* stacking the menu items vertically on mobile. */
+          width: 100%; /* making menu take up the full width of the screen on mobile. */
+          text-align: center; /* centering menu items. */
+        }
+        
+        #mob-menu .mob-menu-inside {
+          list-style-type: none; /* removing bullet points from list */
+          text-align: center; /* centering the list items */
+        }
+        
+        #mob-menu .mob-menu-inside li {
+          border-top: 2px solid rgba(12, 178, 255, 0.2);
+        
+        }
+        
+        #mob-menu .mob-menu-inside li a {
+          display: block; /* making the link take up the full width */
+          padding: 15px 0; 
+          background-color:   #cbefff; /* button's bg color */
+          color: black; /* text color */
+          font-family: 'Oxygen Mono', monospace;    
+          font-weight: 400;
+          font-size: 1em; /* font size */
+          text-decoration: none; /* removing underline */
+          transition: background-color 0.3s ease; 
+        }
+        
+        #mob-menu .mob-menu-inside li a:hover {
+          background-color:#e0f6ff; /* changing color on hover */
+        }
+        
+        .mob-menu-inside {
+          padding: 0;
+          margin: 0;
+        }
+        
+        .navbar {
+            padding: 0; /* Remove padding from navbar */
+        }
+        
+        .navbar .container-fluid {
+            padding: 0; /* Remove padding from the container */
+        }
+        
+        .container {
+            margin: 7rem 4rem 2rem 4rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        }
+        
 
     </style>
 </head>
@@ -105,21 +250,22 @@
             <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
             <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
+
+        <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+        <nav id="mob-menu">
+            <ul class="mob-menu-inside">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
     </div>
     </div>
 </nav>
 <!-- Page Content -->
 <div class="container">
-    <h1>😊 Ponyo Feels — Emotion Recognition WebApp 😊</h1>
+    <h2>😊 Ponyo Feels — Emotion Recognition WebApp 😊</h2>
     <p><strong>Team Members:</strong> <code>Alex Hmitti</code>, <code>Jhon Kim</code>, <code>Aaron Stein</code>, and <code>Rafael Nadal-Scala</code></p> 
-    <p>
-        <a href="https://github.com/software-students-fall2023/4-containerized-app-exercise-team-team-team-team-team-team/actions/workflows/lint.yml">
-            <img src="https://github.com/software-students-fall2023/4-containerized-app-exercise-team-team-team-team-team-team/actions/workflows/lint.yml/badge.svg" alt="Check lint and format">
-        </a>
-        <a href="https://github.com/software-students-fall2023/4-containerized-app-exercise-team-team-team-team-team-team/actions/workflows/python-app.yml">
-            <img src="https://github.com/software-students-fall2023/4-containerized-app-exercise-team-team-team-team-team-team/actions/workflows/python-app.yml/badge.svg?branch=main" alt="CI/CD">
-        </a>
-    </p>
 
     <h3>💡 Concept</h3>
     <p>
@@ -139,7 +285,7 @@
         Ponyo Feels relies on Docker for containerization. Ensure Docker is installed on your machine. If not, download and install it <a href="https://www.docker.com/products/docker-desktop">here</a>.
     </p>
 
-    <h2>⚙️ Installation</h2>
+    <h3>⚙️ Installation</h3>
     <p>
         To get started, clone the repository to your local machine and navigate to the project's directory.
     <br>
@@ -179,15 +325,15 @@
     
     <h3>🚶‍♀️ Walkthrough </h3>
     <h4>Step 1: Click on the <code>Read my facial expression</code> button</h4>
-    <img src="./static/images/feels1-1.webp" style="width:60%">
+    <img src="./static/images/feels1-1.webp">
     <br>
     <h4>Step 2: Click <code>Capture</code> to snap your selfie!</h4>
-    <img src="./static/images/feels1-2.webp" style="width:60%">
+    <img src="./static/images/feels1-2.webp">
     <br>
     <h4>Results: </h4>
-    <img src="./static/images/feels1-3.webp" style="width:60%">
+    <img src="./static/images/feels1-3.webp">
     <br>
-    <button onclick="openponyofeels()" type="button" class="btn btn-secondary">Link to project&nbsp;↗️</button>
+    <button onclick="openponyofeels()" type="button" class="mobile-visible">Link to project&nbsp;↗️</button>
 
 </div>
 
@@ -211,6 +357,9 @@
     function openponyofeels() {
         window.open('https://github.com/jk021227/workportfolio/tree/main/Ponyo%20Feels%20-%20Containerized%20App%20w%3A%20Machine%20Learning%20Client', '_blank');
     }
+    function toggleMenu() {
+        document.getElementById('mob-menu').classList.toggle('show')
+      }
 </script>
 </body>
 

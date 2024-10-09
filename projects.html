@@ -116,14 +116,45 @@
             object-position: center; /* Center the image within the container */
         }
 
-    @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
+
+        h3 {
+            margin-bottom: 1.8rem;
+        }
+        .container {
+            margin-top: 7rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the content in the container */
+        }
+
+        .projects-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling if the content overflows */
+            padding: 0;
+            margin: 0;
+        }
+
+        .one-project {
+            margin: 0 1.5rem;
+            text-align: center; /* Centers text inside each project container */
+            width: 100%; /* Adjust the width of the project container */
+            height: 100%; /* Adjust the height of the project container */
+            overflow: hidden;
+        }
+
+        .container-fluid {
+            box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
+        }
+
         /* showing mobile menu when 'show' class is added */
         #mob-menu.show {
             display: block;
         }
         .btn-secondary {
-      display: none;
-    }
+            display: none;
+        }
 
         h1 {
             margin: 1rem;
@@ -140,7 +171,7 @@
             display: none !important;
         }
 
-        .mobile-menu { /* hamburger menu icon */
+    .mobile-menu { /* hamburger menu icon */
       position: absolute;
       right: 1rem;
       top: -.7rem;
@@ -200,34 +231,26 @@
         padding: 0; /* Remove padding from the container */
     }
 
-
-        .one-project {
-            width: 100%; /* Stacks the projects on smaller screens */
-            padding: 5px 15px;
-        }
-
-        .one-project p {
-            font-family: 'Oxygen Mono', monospace;
-            font-size: 17px;
-            position: relative;
-            width: 100%;
-            bottom: 35px; /* Adjust this value to move the text up or down */
-            text-align: center;
-            color: white;
-            box-sizing: border-box;
-            text-decoration: none;
-        }
-
-        .one-project img {
-            width: 100%;
-            height: auto;
-            border: 10px solid #0cb2ff;
-            border-bottom-width: 45px;
-            overflow: hidden;
-        }
-        
-
+    .one-project p {
+        font-family: 'Oxygen Mono', monospace;
+        font-size: 17px;
+        position: relative;
+        width: 100%;
+        bottom: 35px; /* Adjust this value to move the text up or down */
+        text-align: center;
+        color: white;
+        box-sizing: border-box;
+        text-decoration: none;
     }
+
+    .one-project img {
+        width: 100%;
+        height: auto;
+        border: 10px solid #0cb2ff;
+        border-bottom-width: 45px;
+        overflow: hidden;
+    }   
+}
 
     </style>
 </head>
@@ -288,14 +311,14 @@
         
         <div class="one-project">
             <a href="feels.html">
-                <img src="./static/images/feels1-1.webp" alt="Project 4" style="overflow: hidden; height: 100%;"/>
+                <img src="./static/images/feels.webp" alt="Project 4"/>
                 <p>Ponyo Feels: Facial Recognition</p>
             </a>
         </div>
 
         <div class="one-project">
             <a href="sweetcode.html">
-                <img src="./static/images/sweet.webp" alt="Project 5"style="overflow: hidden; height: 100%;"/>
+                <img src="./static/images/sweet.webp" alt="Project 5"/>
                 <p>GirlsHack 2024: sweetcode</p>
             </a>
         </div>

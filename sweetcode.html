@@ -11,6 +11,12 @@
     
        
     <style>
+        h3{
+            font-size: 20px;
+        }
+        #mob-menu {
+            display: none; 
+        }
 
         h1{
             font-family: 'Oxygen Mono', monospace;
@@ -84,6 +90,149 @@
             margin-top: 20px;
         }
 
+        .mobile-visible {
+            background-color: #0cb2ff;
+            color: white; /* Text color */
+            margin-right: 3px;
+            border-radius: 5px;
+            padding: 8px;
+            border: none;
+        }
+
+        .mobile-visible:hover {
+            background-color:#0087c6; /* Slightly darker color for hover effect */
+        }
+
+        img {
+            width: 35%;
+            height: auto;
+        }
+
+@media only screen and (max-width: 767px) {
+    .container {
+            margin: 7rem 4rem 2rem 4rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    }
+    
+    h2{
+                font-family: 'Oxygen Mono', monospace;
+                font-size: 20px;
+            }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .mobile-visible {
+        background-color: #0cb2ff;
+        color: white; 
+        border-radius: 5px;
+        padding: 8px;
+        border: none;
+    }
+
+    .mobile-visible:hover {
+        background-color:#0087c6; /* Slightly darker color for hover effect */
+    }
+
+    .container-fluid {
+            box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
+        }
+        
+        h1 {
+                margin: 1rem;
+                font-family: 'Oxygen Mono', monospace;
+                font-size: 20px;
+            }
+    
+    .mobile-menu {
+    display: none;
+  }
+
+    /* showing mobile menu when 'show' class is added */
+    #mob-menu.show {
+                display: block;
+            }
+            .btn-secondary {
+                display: none;
+            }
+        
+            .navbar-brand a {
+                margin-bottom: 1rem; /* Add padding around the link */
+                display: inline-block; /* Make the link a block-level element to apply padding */
+            }
+            
+            p.mb-0 {
+                display: none !important;
+            }
+        
+            .mobile-menu { /* hamburger menu icon */
+                position: absolute;
+                right: 1rem;
+                top: -.7rem;
+                display: block;
+                font-size: 3.5rem;
+                color: #0cb2ff; 
+                cursor: pointer;
+                transition: color 0.3s ease;
+                }
+        
+        .mobile-menu:hover {
+          color: #0087c6; /* changes color on hover */
+        }
+        
+        #mob-menu { /* mobile menu */
+          display: column; /* stacking the menu items vertically on mobile. */
+          width: 100%; /* making menu take up the full width of the screen on mobile. */
+          text-align: center; /* centering menu items. */
+        }
+        
+        #mob-menu .mob-menu-inside {
+          list-style-type: none; /* removing bullet points from list */
+          text-align: center; /* centering the list items */
+        }
+        
+        #mob-menu .mob-menu-inside li {
+          border-top: 2px solid rgba(12, 178, 255, 0.2);
+        
+        }
+        
+        #mob-menu .mob-menu-inside li a {
+          display: block; /* making the link take up the full width */
+          padding: 15px 0; 
+          background-color:   #cbefff; /* button's bg color */
+          color: black; /* text color */
+          font-family: 'Oxygen Mono', monospace;    
+          font-weight: 400;
+          font-size: 1em; /* font size */
+          text-decoration: none; /* removing underline */
+          transition: background-color 0.3s ease; 
+        }
+        
+        #mob-menu .mob-menu-inside li a:hover {
+          background-color:#e0f6ff; /* changing color on hover */
+        }
+        
+        .mob-menu-inside {
+          padding: 0;
+          margin: 0;
+        }
+        
+        .navbar {
+            padding: 0; /* Remove padding from navbar */
+        }
+        
+        .navbar .container-fluid {
+            padding: 0; /* Remove padding from the container */
+        }
+        
+}
+
+
     </style>
 </head>
 
@@ -103,38 +252,47 @@
             <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
             <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
+
+        <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+        <nav id="mob-menu">
+            <ul class="mob-menu-inside">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
     </div>
     </div>
 </nav>
 <!-- Page Content -->
 <div class="container">
-        <h1>🍭 sweetcode: Gamifying Computer Science for Girls 💻</h1>
+        <h2>🍭 sweetcode: Gamifying Computer Science for Girls 💻</h2>
         <p><strong>Team members:</strong> <code>Pauline Wee</code> and <code>Jhon Kim</code></p>
-        <h2>💡 Inspiration</h2>
+        <h3>💡 Inspiration</h3>
         <p>
             We were inspired by the challenge of making complex data structures and algorithms more relatable and fun, especially for young girls and minority women who feel intimidated by the scary interface of Leetcode and other technical interviewing tools. 
             We wanted to create an engaging way for learners to grasp these concepts, so we infused storytelling into our project. This is our gateway for fixing the leaky faucet of girls who don't feel like they belong in Computer Science. 👩‍💻💖
         </p>
     
-        <h2>🎮 What It Does</h2>
+        <h3>🎮 What It Does</h3>
         <p>
             <code>sweetcode</code> is our creative take on gamifying computer science concepts for young girls to help increase diversity in tech. 🌈 In our interactive world, players help villagers in <strong>Tree Town</strong> organize their ancient scrolls while solving challenges related to <strong>Binary Trees</strong>, <strong>AVL Trees</strong>, and <strong>Red-Black Trees</strong> 🌳📜. 
             We also added <strong>Interview Isle</strong> where you can practice concepts and get real-time feedback! 🏝️🎤
         </p>
     
-        <h2>🚧 Challenges We Ran Into</h2>
+        <h3>🚧 Challenges We Ran Into</h3>
         <p>
             One of our biggest challenges was finding the right balance between the complexity of computer science concepts and making the narrative engaging 🎭📚. 
             We also faced hurdles in maintaining interactive elements while ensuring our UI remained responsive 📱.
         </p>
     
-        <h2>🌟 What's Next for Sweetcode</h2>
+        <h3>🌟 What's Next for Sweetcode</h3>
         <p>
             Looking ahead, we plan to expand our adventure to new regions like <strong>Graph Grove</strong> 🌲📊, introduce multiplayer features 👯, and include even more complex algorithms to challenge our advanced learners. 
             We're excited about the future of <code>sweetcode</code>! 🚀✨
         </p>
     
-        <h2>🔧 Built With</h2>
+        <h3>🔧 Built With</h3>
         <ul>
             <li>🐍 Python Flask</li>
             <li>🤖 OpenAI API</li>
@@ -143,14 +301,14 @@
             <li>🎨 Tailwind CSS</li>
         </ul>
 
-        <h2>🏆 Best Use of MongoDB Award</h2>
+        <h3>🏆 Best Use of MongoDB Award</h3>
         <p> 
             We were honored to receive the best database award: <br>
-            <img style="width: 35%; height: auto;" src="./static/images/award.webp" alt="award" />
+            <img src="./static/images/award.webp" alt="award" />
         </p>
 
     <br>
-    <button onclick="linktodemo()" type="button" class="btn btn-secondary">Link to demo&nbsp;↗️</button>
+    <button onclick="linktodemo()" type="button" class="mobile-visible">Link to demo&nbsp;↗️</button>
 
 </div>
 
@@ -174,6 +332,10 @@
     function linktodemo() {
         window.open('https://drive.google.com/file/d/1GTI-orHC-6ktGU6Ao4TB587ImI84Xhr0/view', '_blank');
     }
+
+    function toggleMenu() {
+        document.getElementById('mob-menu').classList.toggle('show')
+      }
 </script>
 </body>
 
