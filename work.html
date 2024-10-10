@@ -200,7 +200,7 @@
     margin-left: 0;      /* Remove the margin if there is any */
     }
 
-    .active-page {
+    .actived-mobile {
         color: white; /* Optional: Set text color to white for contrast */
         background-color: #0cb2ff; /* Slightly darker color for hover effect */
     }
@@ -284,22 +284,10 @@
 </div>
 
 <script>
-    // getting current page URL
-    const currentURL = window.location.href;
-    
-    // checking if current URL contains 'work.html'
-    if (currentURL.includes('work.html')) {
-        // applying active class to both desktop and mobile versions
-        const workButton = document.getElementById('workButton');
-        const workPageMobile = document.getElementById('workpage');
-
-        if (workButton) {
-            workButton.classList.add('active-page');
-        }
-
-        if (workPageMobile) {
-            workPageMobile.classList.add('active-page');
-        }
+    // Get the current page URL
+    if (window.location.pathname === '/work.html') {
+        // If the current page is '/about', apply custom background color
+        document.getElementById('workButton').classList.add('active-page');
     }
 
     function about() {
@@ -316,6 +304,9 @@
 
     function toggleMenu() {
         document.getElementById('mob-menu').classList.toggle('show')
+        if(window.location.pathname === '/work.html') {
+            document.getElementById('workpage').classList.add('actived-mobile');
+        }
       }
 </script>
 </body>
