@@ -11,17 +11,38 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
+              .mobile-menu {
+            display: none;
+      }
+
+        #mob-menu {
+            display: none; 
+        }
 
         h1{
             font-family: 'Oxygen Mono', monospace;
             font-size: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h2{
+            font-size: 25px;
+            margin-bottom: .5em;
+        }
+        
+        h3{
+            font-size: 20px;
         }
 
+        h4{
+            font-size: 18px;
+        }
         p{
             font-family: 'Inter', sans-serif;
             font-size: 15px;
+            margin-bottom: 25px;
         }
-
+    
         body {
             margin: 0;
             padding: 0;
@@ -35,7 +56,7 @@
         }
 
         .container {
-            margin: 100px;
+            margin: 100px 50px 80px 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,6 +89,136 @@
             background-color: #0087c6; /* Slightly darker color for hover effect */
             border-color: #0087c6;/* Button border color */
         }
+        .mobile-visible {
+        background-color: #0cb2ff;
+        color: white; /* Text color */
+        margin-right: 3px;
+        margin-top: .8em;
+        border-radius: 5px;
+        padding: 8px;
+        border: none;
+    }
+
+    .mobile-visible:hover {
+        background-color:#0087c6; /* Slightly darker color for hover effect */
+    }
+@media only screen and (max-width: 767px) {
+        .container-fluid {
+    box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
+}
+/* showing mobile menu when 'show' class is added */
+#mob-menu.show {
+display: block;
+}
+.btn-secondary {
+display: none;
+}
+
+h1 {
+margin: 1rem;
+font-family: 'Oxygen Mono', monospace;
+font-size: 20px;
+}
+
+h2 {
+font-size: 22px;
+margin-bottom: 1rem;
+}
+
+.navbar-brand a {
+margin-bottom: 1rem; /* Add padding around the link */
+display: inline-block; /* Make the link a block-level element to apply padding */
+}
+
+p.mb-0 {
+display: none !important;
+}
+
+.mobile-menu { /* hamburger menu icon */
+position: absolute;
+right: 1rem;
+top: -.7rem;
+display: block;
+font-size: 3.5rem;
+color: #0cb2ff; 
+cursor: pointer;
+transition: color 0.3s ease;
+}
+
+.mobile-menu:hover {
+color: #0087c6; /* changes color on hover */
+}
+
+#mob-menu { /* mobile menu */
+display: column; /* stacking the menu items vertically on mobile. */
+width: 100%; /* making menu take up the full width of the screen on mobile. */
+text-align: center; /* centering menu items. */
+}
+
+#mob-menu .mob-menu-inside {
+list-style-type: none; /* removing bullet points from list */
+text-align: center; /* centering the list items */
+}
+
+#mob-menu .mob-menu-inside li {
+border-top: 2px solid rgba(12, 178, 255, 0.2);
+
+}
+
+#mob-menu .mob-menu-inside li a {
+display: block; /* making the link take up the full width */
+padding: 15px 0; 
+background-color:   #cbefff; /* button's bg color */
+color: black; /* text color */
+font-family: 'Oxygen Mono', monospace;    
+font-weight: 400;
+font-size: 1em; /* font size */
+text-decoration: none; /* removing underline */
+transition: background-color 0.3s ease; 
+}
+
+#mob-menu .mob-menu-inside li a:hover {
+background-color:#e0f6ff; /* changing color on hover */
+}
+
+.mob-menu-inside {
+padding: 0;
+margin: 0;
+}
+
+.navbar {
+padding: 0; /* Remove padding from navbar */
+}
+
+.navbar .container-fluid {
+padding: 0; /* Remove padding from the container */
+}
+
+h3 {
+font-size: 18px;
+}
+
+.container {
+    margin: 7rem 5rem 2rem 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    ul {
+    padding-left: 15px; /* Reduce the padding to lessen the indent */
+    margin-left: 0;      /* Remove the margin if there is any */
+    }
+
+    .mobile-visible {
+        /* display: block;  */
+        width: 100%;
+    }
+
+}
+
 
     </style>
 </head>
@@ -88,13 +239,21 @@
             <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
             <button id="aboutButton" onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
+
+        <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+        <nav id="mob-menu">
+            <ul class="mob-menu-inside">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
     </div>
     </div>
 </nav>
 <!-- Page Content -->
 <div class="container"> <!-- Adjust padding-top based on the height of your navbar -->
-
-    <h3>Who am I ? 👩🏻‍💻</h3>
+    <h2>Who am I ? 👩🏻‍💻</h2>
     <p>
         As a software engineer with a strong background in law and UX design, I am passionate about creating solutions that help uplift underrepresented communities. 
         My biggest academic and professional strengths are a determined work ethic, being a flexible team player, and being an clear communicator. 
@@ -102,8 +261,7 @@
         I can operate as both a cooperative teammate and an efficient leader given what the circumstances demand.
     </p>
 
-    <br>
-    <h3>Specialty & Interests 🎽</h3>
+    <h2>Specialty & Interests 🎽</h2>
         <ul>
             <li>Fullstack Development</li>
             <li>UX Design</li>
@@ -112,10 +270,9 @@
             <li>Community Outreach</li>
         </ul>
     
-    <br>
-    <h3>Hackathons & Competitions 🏆</h3>
+    <h2>Hackathons & Competitions 🏆</h2>
     <ul>
-        <li>Best Use Of MongoDB Atlas Award, GirlHacks NJIT | September 2024 | 300 USD prize
+        <li>Best Use Of MongoDB Atlas Award, GirlHacks NJIT | September 2024 | 350 USD prize
         <ul>
             <li>Awarded for best use of database among 200+ participants</li>
             <li>Developed a gamified platform designed to teach complex computer science concepts through storytelling, creating an inclusive learning experience for girls and/or the youth</li>
@@ -160,9 +317,8 @@
         </ul>
         </li>
     </ul>
-    <br>
     <!-- button with link to my CV hosted on goolge drive -->
-    <button onclick="openCV()" type="button" class="btn btn-secondary">View my CV&nbsp;↗️</button>
+    <button onclick="openCV()" type="button" class="mobile-visible">View my CV&nbsp;↗️</button>
     
 </div>
 
@@ -189,6 +345,9 @@
     function openCV() {
         window.open('https://drive.google.com/file/d/1yOQq89CCNUqhgN-EhHX9ySYmblCPO_wj/view?usp=sharing', '_blank');
     }
+    function toggleMenu() {
+        document.getElementById('mob-menu').classList.toggle('show')
+      }
 
 </script>
 </body>

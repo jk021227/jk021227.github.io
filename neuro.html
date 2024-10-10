@@ -11,6 +11,13 @@
     
        
     <style>
+        .mobile-menu {
+            display: none;
+        }
+
+        #mob-menu {
+            display: none; 
+        }
 
         h1{
             font-family: 'Oxygen Mono', monospace;
@@ -86,6 +93,113 @@
             color: #0087c6;
         }
 
+@media only screen and (max-width: 767px) {
+
+        img {
+            width: 90%;
+        }
+                
+        h2{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 20px;
+        }
+
+        .container-fluid {
+        box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
+        }
+
+        h1 {
+                margin: 1rem;
+                font-family: 'Oxygen Mono', monospace;
+                font-size: 20px;
+            }
+        /* showing mobile menu when 'show' class is added */
+        #mob-menu.show {
+            display: block;
+        }
+        .btn-secondary {
+            display: none;
+        }
+
+        .navbar-brand a {
+            margin-bottom: 1rem; /* Add padding around the link */
+            display: inline-block; /* Make the link a block-level element to apply padding */
+        }
+
+        p.mb-0 {
+            display: none !important;
+        }
+
+        .mobile-menu { /* hamburger menu icon */
+            position: absolute;
+            right: 1rem;
+            top: -.7rem;
+            display: block;
+            font-size: 3.5rem;
+            color: #0cb2ff; 
+            cursor: pointer;
+            transition: color 0.3s ease;
+            }
+
+        .mobile-menu:hover {
+        color: #0087c6; /* changes color on hover */
+        }
+
+        #mob-menu { /* mobile menu */
+        display: column; /* stacking the menu items vertically on mobile. */
+        width: 100%; /* making menu take up the full width of the screen on mobile. */
+        text-align: center; /* centering menu items. */
+        }
+
+        #mob-menu .mob-menu-inside {
+        list-style-type: none; /* removing bullet points from list */
+        text-align: center; /* centering the list items */
+        }
+
+        #mob-menu .mob-menu-inside li {
+        border-top: 2px solid rgba(12, 178, 255, 0.2);
+
+        }
+
+        #mob-menu .mob-menu-inside li a {
+        display: block; /* making the link take up the full width */
+        padding: 15px 0; 
+        background-color:   #cbefff; /* button's bg color */
+        color: black; /* text color */
+        font-family: 'Oxygen Mono', monospace;    
+        font-weight: 400;
+        font-size: 1em; /* font size */
+        text-decoration: none; /* removing underline */
+        transition: background-color 0.3s ease; 
+        }
+
+        #mob-menu .mob-menu-inside li a:hover {
+        background-color:#e0f6ff; /* changing color on hover */
+        }
+
+        .mob-menu-inside {
+        padding: 0;
+        margin: 0;
+        }
+
+        .navbar {
+        padding: 0; /* Remove padding from navbar */
+        }
+
+        .navbar .container-fluid {
+        padding: 0; /* Remove padding from the container */
+        }
+
+        .container {
+            margin: 7rem 5rem 0 5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+}
+
     </style>
 </head>
 
@@ -105,12 +219,21 @@
             <button onclick="location.href = 'work.html';" ;" type="button" class="btn btn-secondary">Work Experience</button>
             <button onclick="location.href = 'about.html';" ;" type="button" class="btn btn-secondary">About Me</button>
         </div>
+
+        <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+        <nav id="mob-menu">
+            <ul class="mob-menu-inside">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
     </div>
     </div>
 </nav>
 <!-- Page Content -->
 <div class="container">
-    <h1>🗣️ Ponyo — Neurodivergence Aid 🗣️</h1>
+    <h2>🗣️ Ponyo — Neurodivergence Aid</h2>
     <p><strong>Team Members:</strong> <code>Alex Hmitti</code>, <code>Jhon Kim</code>, <code>Aaron Stein</code>, and <code>Rafael Nadal-Scala</code></p> 
     <h3>👥 Stakeholders</h3>
     <h4>Stakeholder A: (Neurodivergent individual with ADD)</h4>
@@ -182,6 +305,10 @@
     function projects() {
         window.location.href = 'projects.html';
     }
+
+    function toggleMenu() {
+        document.getElementById('mob-menu').classList.toggle('show')
+      }
 </script>
 </body>
 
