@@ -201,6 +201,11 @@ font-size: 18px;
     }
 
 }
+
+.active-page {
+    color: white; /* Optional: Set text color to white for contrast */
+    background-color: #0cb2ff; /* Slightly darker color for hover effect */
+}
     
     </style>
 </head>
@@ -226,7 +231,7 @@ font-size: 18px;
         <nav id="mob-menu">
             <ul class="mob-menu-inside">
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="work.html">Work Experience</a></li>
+                <li><a id="workpage" href="work.html">Work Experience</a></li>
                 <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
@@ -283,6 +288,7 @@ font-size: 18px;
     if (window.location.pathname === '/work.html') {
         // If the current page is '/about', apply custom background color
         document.getElementById('workButton').classList.add('active-page');
+        document.getElementById('workpage').classList.add('active-page');
     }
 
     function about() {
