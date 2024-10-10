@@ -91,102 +91,102 @@
         }
 
 @media only screen and (max-width: 767px) {
-        .container-fluid {
-    box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
-}
-/* showing mobile menu when 'show' class is added */
-#mob-menu.show {
-display: block;
-}
-.btn-secondary {
-display: none;
-}
+    .container-fluid {
+        box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
+    }
+    /* showing mobile menu when 'show' class is added */
+    #mob-menu.show {
+    display: block;
+    }
+    .btn-secondary {
+    display: none;
+    }
 
-h1 {
-margin: 1rem;
-font-family: 'Oxygen Mono', monospace;
-font-size: 20px;
-}
+    h1 {
+    margin: 1rem;
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 20px;
+    }
 
-h2 {
-font-size: 22px;
-margin-bottom: 1rem;
-}
+    h2 {
+    font-size: 22px;
+    margin-bottom: 1rem;
+    }
 
-.navbar-brand a {
-margin-bottom: 1rem; /* Add padding around the link */
-display: inline-block; /* Make the link a block-level element to apply padding */
-}
+    .navbar-brand a {
+    margin-bottom: 1rem; /* Add padding around the link */
+    display: inline-block; /* Make the link a block-level element to apply padding */
+    }
 
-p.mb-0 {
-display: none !important;
-}
+    p.mb-0 {
+    display: none !important;
+    }
 
-.mobile-menu { /* hamburger menu icon */
-position: absolute;
-right: 1rem;
-top: -.7rem;
-display: block;
-font-size: 3.5rem;
-color: #0cb2ff; 
-cursor: pointer;
-transition: color 0.3s ease;
-}
+    .mobile-menu { /* hamburger menu icon */
+    position: absolute;
+    right: 1rem;
+    top: -.7rem;
+    display: block;
+    font-size: 3.5rem;
+    color: #0cb2ff; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+    }
 
-.mobile-menu:hover {
-color: #0087c6; /* changes color on hover */
-}
+    .mobile-menu:hover {
+    color: #0087c6; /* changes color on hover */
+    }
 
-#mob-menu { /* mobile menu */
-display: column; /* stacking the menu items vertically on mobile. */
-width: 100%; /* making menu take up the full width of the screen on mobile. */
-text-align: center; /* centering menu items. */
-}
+    #mob-menu { /* mobile menu */
+    display: column; /* stacking the menu items vertically on mobile. */
+    width: 100%; /* making menu take up the full width of the screen on mobile. */
+    text-align: center; /* centering menu items. */
+    }
 
-#mob-menu .mob-menu-inside {
-list-style-type: none; /* removing bullet points from list */
-text-align: center; /* centering the list items */
-}
+    #mob-menu .mob-menu-inside {
+    list-style-type: none; /* removing bullet points from list */
+    text-align: center; /* centering the list items */
+    }
 
-#mob-menu .mob-menu-inside li {
-border-top: 2px solid rgba(12, 178, 255, 0.2);
+    #mob-menu .mob-menu-inside li {
+    border-top: 2px solid rgba(12, 178, 255, 0.2);
 
-}
+    }
 
-#mob-menu .mob-menu-inside li a {
-display: block; /* making the link take up the full width */
-padding: 15px 0; 
-background-color:   #cbefff; /* button's bg color */
-color: black; /* text color */
-font-family: 'Oxygen Mono', monospace;    
-font-weight: 400;
-font-size: 1em; /* font size */
-text-decoration: none; /* removing underline */
-transition: background-color 0.3s ease; 
-}
+    #mob-menu .mob-menu-inside li a {
+    display: block; /* making the link take up the full width */
+    padding: 15px 0; 
+    background-color:   #cbefff; /* button's bg color */
+    color: black; /* text color */
+    font-family: 'Oxygen Mono', monospace;    
+    font-weight: 400;
+    font-size: 1em; /* font size */
+    text-decoration: none; /* removing underline */
+    transition: background-color 0.3s ease; 
+    }
 
-#mob-menu .mob-menu-inside li a:hover {
-background-color:#e0f6ff; /* changing color on hover */
-}
+    #mob-menu .mob-menu-inside li a:hover {
+    background-color:#e0f6ff; /* changing color on hover */
+    }
 
-.mob-menu-inside {
-padding: 0;
-margin: 0;
-}
+    .mob-menu-inside {
+    padding: 0;
+    margin: 0;
+    }
 
-.navbar {
-padding: 0; /* Remove padding from navbar */
-}
+    .navbar {
+    padding: 0; /* Remove padding from navbar */
+    }
 
-.navbar .container-fluid {
-padding: 0; /* Remove padding from the container */
-}
+    .navbar .container-fluid {
+    padding: 0; /* Remove padding from the container */
+    }
 
-h3 {
-font-size: 18px;
-}
+    h3 {
+    font-size: 18px;
+    }
 
-.container {
+    .container {
         margin: 7rem 5rem 2rem 5rem;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -200,11 +200,11 @@ font-size: 18px;
     margin-left: 0;      /* Remove the margin if there is any */
     }
 
-}
+    .active-page {
+        color: white; /* Optional: Set text color to white for contrast */
+        background-color: #0cb2ff; /* Slightly darker color for hover effect */
+    }
 
-.active-page {
-    color: white; /* Optional: Set text color to white for contrast */
-    background-color: #0cb2ff; /* Slightly darker color for hover effect */
 }
     
     </style>
@@ -284,11 +284,22 @@ font-size: 18px;
 </div>
 
 <script>
-    // Get the current page URL
-    if (window.location.pathname === '/work.html') {
-        // If the current page is '/about', apply custom background color
-        document.getElementById('workButton').classList.add('active-page');
-        document.getElementById('workpage').classList.add('active-page');
+    // getting current page URL
+    const currentURL = window.location.href;
+    
+    // checking if current URL contains 'work.html'
+    if (currentURL.includes('work.html')) {
+        // applying active class to both desktop and mobile versions
+        const workButton = document.getElementById('workButton');
+        const workPageMobile = document.getElementById('workpage');
+
+        if (workButton) {
+            workButton.classList.add('active-page');
+        }
+
+        if (workPageMobile) {
+            workPageMobile.classList.add('active-page');
+        }
     }
 
     function about() {
