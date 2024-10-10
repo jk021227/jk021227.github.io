@@ -165,10 +165,6 @@
     transition: background-color 0.3s ease; 
     }
 
-    #mob-menu .mob-menu-inside li a:hover {
-    background-color:#e0f6ff; /* changing color on hover */
-    }
-
     .mob-menu-inside {
     padding: 0;
     margin: 0;
@@ -200,11 +196,6 @@
     margin-left: 0;      /* Remove the margin if there is any */
     }
 
-    .actived-mobile {
-        color: white; /* Optional: Set text color to white for contrast */
-        background-color: #0cb2ff; /* Slightly darker color for hover effect */
-    }
-
 }
     
     </style>
@@ -231,7 +222,7 @@
         <nav id="mob-menu">
             <ul class="mob-menu-inside">
                 <li><a href="projects.html">Projects</a></li>
-                <li><a id="workpage" href="work.html">Work Experience</a></li>
+                <li><a href="work.html" style="color: white; background-color: #0cb2ff;">Work Experience</a></li>
                 <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
@@ -304,9 +295,6 @@
 
     function toggleMenu() {
         document.getElementById('mob-menu').classList.toggle('show')
-        if(window.location.pathname === '/work.html') {
-            document.getElementById('workpage').classList.add('actived-mobile');
-        }
       }
 </script>
 </body>
