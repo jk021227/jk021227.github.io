@@ -8,6 +8,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
     <link rel="stylesheet" href="./css/work.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/isn6yeu.css">
+    <link rel="stylesheet" href="./styles/nav.css">
     
        
     <style>
@@ -19,15 +21,6 @@
     display: none;
 }
 
-        h1{
-            font-family: 'Oxygen Mono', monospace;
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
-        
-        h2{
-            font-size: 25px;
-        }
         h3{
             font-size: 20px;
         }
@@ -55,13 +48,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-        }
-        .btn-secondary {
-            /* background-color:  #0000ff;  */
-            background-color: #0cb2ff;
-            border-color: #0cb2ff; /* Button border color */
-            color: white; /* Text color */
-            margin-right: 3px;
         }
     
         .btn-secondary:last-child {
@@ -114,24 +100,14 @@
 
 @media only screen and (max-width: 767px) {
     .container {
-            margin: 7rem 4rem 2rem 4rem;
+            margin: 6rem 4rem 2rem 4rem;
             padding-left: 2rem;
             padding-right: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
     }
-    h1 {
-        margin: 1rem;
-        font-family: 'Oxygen Mono', monospace;
-        font-size: 20px;
-    }
-    
-    
-    h2{
-        font-family: 'Oxygen Mono', monospace;
-        font-size: 20px;
-    }
+
 
     img {
         width: 100%;
@@ -152,11 +128,28 @@
     .container-fluid {
             box-shadow: 4px 4px 10px rgba(0, 135, 198, 0.4), -3px -3px 5px rgba(0, 135, 198, 0.1);
         }
-        
+        .mobile-menu { /* hamburger menu icon */
+        position: absolute;
+        right: 1rem;
+        top: -.9rem;
+        display: block;
+        font-size: 3.2rem;
+        color: #0cb2ff; 
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
 
-    .mobile-menu {
-    display: none;
-  }
+    #mob-menu .mob-menu-inside li a {
+        display: block; /* making the link take up the full width */
+        padding: 15px 0; 
+        background-color:   #cbefff; /* button's bg color */
+        color: black; /* text color */
+        font-family: 'p22-mackinac-pro', serif;  
+        font-weight: 400;
+        font-size: 1em; /* font size */
+        text-decoration: none; /* removing underline */
+        transition: background-color 0.3s ease; 
+      }  
 
     /* showing mobile menu when 'show' class is added */
     #mob-menu.show {
@@ -174,17 +167,6 @@
             p.mb-0 {
                 display: none !important;
             }
-        
-            .mobile-menu { /* hamburger menu icon */
-                position: absolute;
-                right: 1rem;
-                top: -.7rem;
-                display: block;
-                font-size: 3.5rem;
-                color: #0cb2ff; 
-                cursor: pointer;
-                transition: color 0.3s ease;
-                }
         
         .mobile-menu:hover {
           color: #0087c6; /* changes color on hover */
@@ -211,7 +193,7 @@
           padding: 15px 0; 
           background-color:   #cbefff; /* button's bg color */
           color: black; /* text color */
-          font-family: 'Oxygen Mono', monospace;    
+          font-family: 'p22-mackinac-pro', serif;    
           font-weight: 400;
           font-size: 1em; /* font size */
           text-decoration: none; /* removing underline */
@@ -241,12 +223,12 @@
 <nav class="navbar fixed-top navbar-light">
     <div class="container-fluid d-flex justify-content-between">
         <div>
-            <h1 class="navbar-brand mb-0 h1">
+            <h1 class="inside_nav">
                 <a href="index.html" style="text-decoration: none; color: inherit;">
-                  🩵 Jhon's Sky Studio 🩵
+                    🩵&nbsp; Jhon's Sky Studio &nbsp;🩵
                 </a>
-            </h1>  
-            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+                <p class="mb-0" style="display: inline; font-family: 'p22-mackinac-pro', sans-serif; 2">—&nbsp; where my imagination comes to life!</p>
+            </h1>                  
         </div>
         <div>
             <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button>

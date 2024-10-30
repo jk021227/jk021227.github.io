@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="https://use.typekit.net/isn6yeu.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -19,10 +19,13 @@
             display: none; 
         }
 
-        h1{
-            font-family: 'Oxygen Mono', monospace;
-            font-size: 25px;
-            margin-bottom: 10px;
+        h1 {
+            font-family: 'p22-mackinac-pro', serif;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            font-style: normal;
+            font-size: 21px;
+            margin-top: .4rem;
         }
         
         h2{
@@ -62,7 +65,7 @@
             justify-content: center;
         }
         .btn-secondary {
-            /* background-color:  #0000ff;  */
+            font-family: 'p22-mackinac-pro', serif;
             background-color: #0cb2ff;
             border-color: #0cb2ff; /* Button border color */
             color: white; /* Text color */
@@ -116,7 +119,6 @@ display: none;
 
 h1 {
 margin: 1rem;
-font-family: 'Oxygen Mono', monospace;
 font-size: 20px;
 }
 
@@ -125,19 +127,17 @@ font-size: 22px;
 margin-bottom: 1rem;
 }
 
-.navbar-brand a {
-margin-bottom: 1rem; /* Add padding around the link */
-display: inline-block; /* Make the link a block-level element to apply padding */
+.inside_nav a {
+    display: inline-block; /* Make the link a block-level element to apply padding */
 }
-
-p.mb-0 {
-display: none !important;
+.inside_nav .mb-0 {
+    display: none !important;
 }
 
 .mobile-menu { /* hamburger menu icon */
 position: absolute;
 right: 1rem;
-top: -.7rem;
+top: -1.1rem;
 display: block;
 font-size: 3.5rem;
 color: #0cb2ff; 
@@ -170,7 +170,7 @@ display: block; /* making the link take up the full width */
 padding: 15px 0; 
 background-color:   #cbefff; /* button's bg color */
 color: black; /* text color */
-font-family: 'Oxygen Mono', monospace;    
+font-family: 'p22-mackinac-pro', serif;  
 font-weight: 400;
 font-size: 1em; /* font size */
 text-decoration: none; /* removing underline */
@@ -222,12 +222,12 @@ font-size: 18px;
 <nav class="navbar fixed-top navbar-light">
     <div class="container-fluid d-flex justify-content-between">
         <div>
-            <h1 class="navbar-brand mb-0 h1">
+            <h1 class="inside_nav">
                 <a href="index.html" style="text-decoration: none; color: inherit;">
-                  🩵 Jhon's Sky Studio 🩵
+                    🩵&nbsp; Jhon's Sky Studio &nbsp;🩵
                 </a>
-            </h1>  
-            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+                <p class="mb-0" style="display: inline; font-family: 'p22-mackinac-pro', serif;">—&nbsp; where my imagination comes to life!</p>
+            </h1>                  
         </div>
         <div>
             <!-- <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button> -->

@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono">
+    <link rel="stylesheet" href="https://use.typekit.net/isn6yeu.css">
     <link rel="stylesheet" href="./css/work.css"/>
        
     <style>
 
-.mobile-menu {
-    display: none;
-  }
+    .mobile-menu {
+        display: none;
+    }
 
-#mob-menu {
-    display: none; 
-}
-
-        h1{
-            font-family: 'Oxygen Mono', monospace;
-            font-size: 25px;
-        }
+    #mob-menu {
+        display: none; 
+    }
+    h1 {
+        font-family: 'p22-mackinac-pro', serif;
+        font-weight: 500;
+        letter-spacing: 2.5px;
+        font-style: normal;
+        font-size: 21px;
+        margin-top: .4rem;
+    }
     
         p{
-            font-family: 'Inter', sans-serif;
+            font-family: 'p22-mackinac-pro', sans-serif;
             font-size: 15px;
+            font-weight: 500;
         }
     
         body {
@@ -50,6 +54,7 @@
 
         .btn-secondary {
             /* background-color:  #0000ff;  */
+            font-family: 'p22-mackinac-pro', serif;
             background-color: #0cb2ff;
             border-color: #0cb2ff; /* Button border color */
             color: white; /* Text color */
@@ -95,11 +100,11 @@
             width: 100%;
             height: auto;
             border: 10px solid #0cb2ff;
+            border-radius: 10px;
             border-bottom-width: 45px;
         }
 
         .one-project p {
-            font-family: 'Oxygen Mono', monospace;
             font-size: 20px;
             position: absolute;
             width: 100%;
@@ -116,10 +121,18 @@
             object-position: center; /* Center the image within the container */
         }
 
+        h3 {
+            font-family: 'p22-mackinac-pro', serif;
+            margin-bottom: 0;
+            font-weight: 600;
+            text-align: center;
+        }
+
 @media only screen and (max-width: 767px) {
 
         h3 {
             margin-bottom: 1.8rem;
+            font-size: 25px;
         }
         .container {
             margin-top: 7rem;
@@ -158,25 +171,23 @@
 
         h1 {
             margin: 1rem;
-            font-family: 'Oxygen Mono', monospace;
             font-size: 20px;
         }
 
-        .navbar-brand a {
-            margin-bottom: 1rem; /* Add padding around the link */
+        .inside_nav a {
             display: inline-block; /* Make the link a block-level element to apply padding */
         }
         
-        p.mb-0 {
+        .inside_nav .mb-0 {
             display: none !important;
         }
 
     .mobile-menu { /* hamburger menu icon */
       position: absolute;
       right: 1rem;
-      top: -.7rem;
+      top: -.9rem;
       display: block;
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       color: #0cb2ff; 
       cursor: pointer;
       transition: color 0.3s ease;
@@ -207,7 +218,7 @@
       padding: 15px 0; 
       background-color:   #cbefff; /* button's bg color */
       color: black; /* text color */
-      font-family: 'Oxygen Mono', monospace;    
+      font-family: 'p22-mackinac-pro', serif;   
       font-weight: 400;
       font-size: 1em; /* font size */
       text-decoration: none; /* removing underline */
@@ -227,7 +238,7 @@
     }
 
     .one-project p {
-        font-family: 'Oxygen Mono', monospace;
+        font-family: 'p22-mackinac-pro', serif;
         font-size: 16px;
         position: relative;
         width: 100%;
@@ -253,12 +264,12 @@
 <nav class="navbar fixed-top navbar-light">
     <div class="container-fluid d-flex justify-content-between">
         <div>
-            <h1 class="navbar-brand mb-0 h1">
+            <h1 class="inside_nav">
                 <a href="index.html" style="text-decoration: none; color: inherit;">
-                  🩵 Jhon's Sky Studio 🩵
+                    🩵&nbsp; Jhon's Sky Studio &nbsp;🩵
                 </a>
-            </h1>  
-            <p class="mb-0" style="display: inline; font-family: 'Oxygen Mono', monospace;">—&nbsp; where my imagination comes to life!</p>
+                <p class="mb-0" style="display: inline;">—&nbsp; where my imagination comes to life!</p>
+            </h1>                  
         </div>
         <div>
             <!-- <button onclick="goBack()" type="button" class="btn btn-secondary">Back</button> -->
