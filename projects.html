@@ -89,16 +89,25 @@
         }
         
         .one-project {
-            width: 500px;
+            width: 400px;
+            height: 270px;
             margin-top: 3%;
             margin-right: 3%;
             display: inline-block;
             position: relative;
+            border-radius: 10px;
+
+        }
+
+        .one-project:hover {
+            transform: scale(1.05);
+            transition: transform 0.5s ease;
+            box-shadow: 10px 10px 20px rgba(9, 58, 111, 0.5);
         }
 
         .one-project img {
             width: 100%;
-            height: auto;
+            height: 270px;
             border: 10px solid #0cb2ff;
             border-radius: 10px;
             border-bottom-width: 45px;
@@ -113,6 +122,7 @@
             color: white;
             box-sizing: border-box;
         }
+
 
         img {
             width: 100%;
@@ -135,7 +145,7 @@
             font-size: 25px;
         }
         .container {
-            margin-top: 7rem;
+            margin-top: 5.5rem;
             margin-bottom: 0.5rem;
             display: flex;
             flex-direction: column;
